@@ -1,9 +1,6 @@
 package system_programming.lab1;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
@@ -12,31 +9,49 @@ import java.util.StringTokenizer;
  */
 public class Lexer {
 
-    private final File KEY_WORDS_FILE = new File("system_programming/key_words.txt");
+    public final File KEY_WORDS_FILE =
+            new File("/home/nikolay/IdeaProjects/4COURSE/src/resources/sys_prog/key_words.txt");
+    private static final File source =
+            new File("/home/nikolay/IdeaProjects/4COURSE/src/main/java/system_programming/lab1/Lexer.java");
+    private static final File dest =
+            new File("/home/nikolay/IdeaProjects/4COURSE/src/resources/sys_prog/lexer.txt");
 
     private ArrayList<String> getKeyWordsFromFile() throws IOException {
         ArrayList<String> keyWords = new ArrayList<String>();
+        String line;
         BufferedReader br = new BufferedReader(new FileReader(KEY_WORDS_FILE));
-        while (br.readLine() != null) {
-            keyWords.add(br.readLine());
+        while ((line = br.readLine()) != null) {
+            keyWords.add(line);
         }
+        br.close();
         return keyWords;
     }
 
-    public void some(File fileName) throws IOException {
+    public void rewrite(File source, File dest) throws IOException {
         StringTokenizer token;
         ArrayList<String> keyWords = getKeyWordsFromFile();
+//        String space = " ";
 
-        BufferedReader br = new BufferedReader(new FileReader(fileName));
-        while (br.readLine() != null) {
-            token = new StringTokenizer(br.readLine());
+        BufferedReader br = new BufferedReader(new FileReader(source));
+        PrintWriter pw = new PrintWriter(dest);
+        String line;
+        while ((line = br.readLine()) != null) {
+            token = new StringTokenizer(line, " \t\r\n");
             while (token.hasMoreTokens()) {
                 String word = token.nextToken();
                 if (keyWords.contains(word)) {
-                    convertWordToInt(word);
+                    word = convertWordToInt(word);
                 }
+                writeToFileByWord(pw, word);
             }
         }
+        pw.close();
+        br.close();
+    }
+
+    public void writeToFileByWord(PrintWriter pw, String word) throws IOException {
+        pw.print(word);
+        pw.print(" ");
     }
 
     private String convertWordToInt(String word) {
@@ -48,9 +63,16 @@ public class Lexer {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Lexer lexer = new Lexer();
         String s = lexer.convertWordToInt("Hello world");
         System.out.println(s);
+
+        lexer.rewrite(source, dest);
+//        PrintWriter pw = new PrintWriter(dest);
+//        pw.print("Hello world");
+//        pw.print(" ");
+//        pw.println("second");
+//        pw.close();
     }
 }
