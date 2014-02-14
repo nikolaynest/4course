@@ -24,14 +24,25 @@ public class FridgeTest {
     }
 
     @Test
-    public void testTurnOn() {
+    public void testIsTurnOnTrue() {
         assertTrue(fridge.isTurnOn());
     }
 
+    @Test public void testTurnOnTrue(){
+        fridge.turnOn();
+        assertTrue(fridge.isTurnOn());
+    }
     @Test
-    public void testTurnOff() {
+    public void testIsTurnOffFalse() {
         fridge.turnOff();
         assertFalse(fridge.isTurnOn());
+    }
+
+    @Test public void testTurnOnAfterTurnOff(){
+        fridge.turnOn();
+        fridge.turnOff();
+        fridge.turnOn();
+        assertTrue(fridge.isTurnOn());
     }
 
     @Test
@@ -52,7 +63,7 @@ public class FridgeTest {
     }
 
     @Test
-    public void testHasSpoiledProducts() {
+    public void testHasSpoiledProductsFalse() {
         assertFalse(fridge.hasSpoiledProducts());
     }
 
@@ -85,7 +96,7 @@ public class FridgeTest {
     }
 
     @Test
-    public void testTakeFoodOut() {
+    public void testTakeFoodOutTwo() {
         Food food = new Food("Fish", Calendar.getInstance().get(Calendar.DAY_OF_YEAR));
         Food food1 = new Food("Tomato", Calendar.getInstance().get(Calendar.DAY_OF_YEAR));
         fridge.putFoodIn(food);
@@ -95,12 +106,11 @@ public class FridgeTest {
         assertTrue(fridge.isEmpty());
     }
 
-    @Test
+    @Test(expected = NullPointerException.class)
     public void testTakeFoodOutNull() {
         Food food = new Food("Fish", Calendar.getInstance().get(Calendar.DAY_OF_YEAR));
         fridge.putFoodIn(food);
         fridge.takeFoodOut(null);
-        assertFalse(fridge.isEmpty());
     }
 
     @Test
@@ -132,20 +142,12 @@ public class FridgeTest {
         }
     }
 
-    @Test
-    public void testDate() {
-        Calendar calendar = Calendar.getInstance();
-        int today = 39;
-        assertEquals(today, calendar.get(Calendar.DAY_OF_YEAR));
-    }
-
     @Ignore
     @Test
     public void testDifferenceDate() {
         Calendar c1 = Calendar.getInstance();
         c1.get(Calendar.DAY_OF_YEAR);
         Calendar c2 = c1;
-
     }
 
     @Test
@@ -167,13 +169,13 @@ public class FridgeTest {
     }
 
     @Test
-    public void test1() {
+    public void testIsEmptyAfterTurnOn() {
         fridge.turnOn();
         assertTrue(fridge.isEmpty());
     }
 
     @Test
-    public void test2() {
+    public void testHasSpoiledProductsAfterPutFoodIn() {
         fridge.turnOn();
         Food f = new Food("f", today - 7);
         fridge.putFoodIn(f);
@@ -181,7 +183,7 @@ public class FridgeTest {
     }
 
     @Test
-    public void test3() {
+    public void testHasSpoiledProdAfterWeek() {
         fridge.turnOn();
         Food f = new Food("f", today - 8);
         fridge.putFoodIn(f);
@@ -189,7 +191,7 @@ public class FridgeTest {
     }
 
     @Test
-    public void test4() {
+    public void testHasSpoiledProdAfterDayWhenTurnOff() {
         fridge.turnOn();
         Food f = new Food("f", today - 1);
         fridge.putFoodIn(f);
@@ -198,7 +200,7 @@ public class FridgeTest {
     }
 
     @Test
-    public void test5() {
+    public void testHasSpoiledProdAfter2DaysWhenTurnOff() {
         fridge.turnOn();
         Food f = new Food("f", today - 2);
         fridge.putFoodIn(f);
@@ -206,12 +208,10 @@ public class FridgeTest {
         assertTrue(fridge.hasSpoiledProducts());
     }
 
-    @Test
-    public void test6() {
-        fridge.turnOn();
-        Food f = new Food("f", today - 2);
-        fridge.putFoodIn(f);
-        fridge.turnOff();
-        assertTrue(fridge.hasSpoiledProducts());
+    @Test public void testTakeFoodOutDoesEqual(){
+        Food f1 = new Food("food", 1);
+        Food f2 = new Food("food", 1);
+        fridge.putFoodIn(f1);
+        assertTrue(fridge.takeFoodOut(f2));
     }
 }

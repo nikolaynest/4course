@@ -1,4 +1,5 @@
 package qa_1.lab1;
+
 import java.util.*;
 
 /**
@@ -27,18 +28,21 @@ public class Fridge {
         storageLife = STORAGE_LIFE_TURN_ON;
     }
 
-    public Fridge(Food food){
+    public Fridge(Food food) {
         isTurnOn = true;
         products = new ArrayList<Food>();
         products.add(food);
         isEmpty = isEmpty();
         storageLife = STORAGE_LIFE_TURN_ON;
     }
+
     public boolean isTurnOn() {
         return isTurnOn;
     }
 
-    public boolean isEmpty() { return products.size() == 0 ? true : false; }
+    public boolean isEmpty() {
+        return products.size() == 0 ? true : false;
+    }
 
     public void turnOn() {
         isTurnOn = true;
@@ -50,57 +54,71 @@ public class Fridge {
         storageLife = STORAGE_LIFE_TURN_OFF;
     }
 
-    public void putFoodIn(Food food){
+    public void putFoodIn(Food food) {
         if (food != null)
             products.add(food);
     }
 
-    public void takeFoodOut(Food food){
-        if (food != null){
-            for(Iterator<Food> foodIt = products.iterator(); foodIt.hasNext();){
-                if (foodIt.next().equals(food)){
-                    foodIt.remove();
-                }
-            }
+    public boolean takeFoodOut(Food food) {
+        if (food == null) {
+            throw new NullPointerException("Your link points to null");
         }
-    }
-
-    public boolean hasSpoiledProducts(){
-        changeFoodStatus();
-        for(Food p : products){
-            if (p.isSpoiled()){
+        for (Iterator<Food> foodIt = products.iterator(); foodIt.hasNext(); ) {
+            if (foodIt.next().equals(food)) {
+                foodIt.remove();
                 return true;
             }
         }
         return false;
     }
 
-    public int getNumOfSpoiledProducts(){
+    public void deleteFood(Food food){
+        if (food == null)
+            throw new NullPointerException();
+        for(int i = 0; i < products.size(); i++){
+            if (products.get(i).equals(food))
+                products.remove(i);
+        }
+    }
+
+    public boolean hasSpoiledProducts() {
+        changeFoodStatus();
+        for (Food p : products) {
+            if (p.isSpoiled()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public int getNumOfSpoiledProducts() {
         changeFoodStatus();
         int num = 0;
-        for(Food f : products){
-            if (f.isSpoiled()){
+        for (Food f : products) {
+            if (f.isSpoiled()) {
                 num++;
             }
         }
         return num;
     }
 
-    public void changeFoodStatus(){
+    public void changeFoodStatus() {
         Calendar calendar = Calendar.getInstance();
         int today = calendar.get(Calendar.DAY_OF_YEAR);
-        for (Food f : products){
-            if (Math.abs(today - f.dateWhenPutIn) > storageLife){
+        for (Food f : products) {
+            if (Math.abs(today - f.dateWhenPutIn) > storageLife) {
                 f.setSpoiled(true);
             }
         }
     }
-    public int getNumOfProducts(){
+
+    public int getNumOfProducts() {
         return products.size();
     }
-    public Object[][] getFood(){
+
+    public Object[][] getFood() {
         Object[][] data = new Object[products.size()][2];
-        for (int i = 0; i < products.size(); i++){
+        for (int i = 0; i < products.size(); i++) {
             data[i][0] = products.get(i).getFoodName();
             data[i][1] = products.get(i).isSpoiled();
         }

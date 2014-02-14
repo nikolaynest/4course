@@ -5,7 +5,11 @@ import qa_1.lab1.Food;
 import qa_1.lab1.Fridge;
 
 import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import javax.swing.table.AbstractTableModel;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -22,6 +26,11 @@ public class Frame extends JFrame {
     private JToggleButton button;
     private JLabel label;
     JLabel hasFood;
+    final MyTableModel myTableModel = new MyTableModel();
+
+    public void some(){
+
+    }
 
     public Frame() {
         super("ХОЛОДИЛЬНИК");
@@ -37,12 +46,9 @@ public class Frame extends JFrame {
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 
         JPanel header = new JPanel();
-//        header.setLayout(new BoxLayout(header, BoxLayout.X_AXIS));
-//        header.setAlignmentX(header.LEFT_ALIGNMENT);
-
         label = new JLabel("Выключен");
         button = new JToggleButton("ON/OFF");
-        button.setSize(200, 200);
+        button.setSize(200, 500);
         button.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
@@ -57,13 +63,54 @@ public class Frame extends JFrame {
         });
         header.add(button);
         header.add(label);
-//        header.setAlignmentX(header.CENTER_ALIGNMENT);
 
         JPanel infoPanel = new JPanel();
         hasFood = new JLabel("Холодильник пуст");
+        JButton update = new JButton("Проверить продукты");
+        update.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                myTableModel.fireTableDataChanged();
+            }
+        });
         infoPanel.add(hasFood);
+        infoPanel.add(update);
+
 
         JPanel foodPanel = new JPanel();
+
+        final JButton delete = new JButton("Вынуть из холодильника");
+        delete.setEnabled(false);
+        final JTable listTable = new JTable(myTableModel);
+        listTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        ListSelectionModel lsMode = listTable.getSelectionModel();
+        lsMode.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+
+                delete.setEnabled(true);
+                final int row = listTable.getSelectedRow();
+                System.out.println("row = " + row);
+                String name = (String) listTable.getValueAt(row, 0);
+                System.out.println(row + " " + name + " " + listTable.getValueAt(row, 1));
+                final Food f = new Food(name, 2);
+                delete.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        if (listTable.isRowSelected(row) && row >= 0) {
+                            myTableModel.fireTableRowsDeleted(row, row);
+                            fridge.deleteFood(f);
+                            delete.setEnabled(false);
+
+                        }
+                    }
+                });
+            }
+        });
+
+        JScrollPane jScrollPane = new JScrollPane(listTable);
+        listTable.setPreferredScrollableViewportSize(new Dimension(250, 100));
+
         JLabel jlb = new JLabel("Введите название продукта");
         final JTextField foodName = new JTextField(18);
         JButton foodButton = new JButton("Положить в холодильник");
@@ -77,26 +124,18 @@ public class Frame extends JFrame {
                 } else {
                     hasFood.setText("Холодильник пуст");
                 }
-
+                myTableModel.fireTableDataChanged();
             }
         });
+        foodPanel.add(delete);
         foodPanel.add(jlb);
         foodPanel.add(foodName);
         foodPanel.add(foodButton);
-
-        JPanel foodListPanel = new JPanel();
-
-        JTable listTable = new JTable(fridge.getFood(), new String[]{"Продукт", "Испорченный"});
-        JScrollPane jScrollPane = new JScrollPane(listTable);
-        listTable.setPreferredScrollableViewportSize(new Dimension(200, 50));
-
-        foodListPanel.add(jScrollPane);
-
+        foodPanel.add(jScrollPane);
 
         panel.add(header);
         panel.add(infoPanel);
         panel.add(foodPanel);
-        panel.add(foodListPanel);
 
         add(panel);
         setVisible(true);
@@ -116,15 +155,36 @@ public class Frame extends JFrame {
 
         @Override
         public Object getValueAt(int rowIndex, int columnIndex) {
-            Food food = fridge.getProducts().get(rowIndex);
-            switch (columnIndex) {
-                case 0:
-                    return food.getFoodName();
-                case 1:
-                    return food.isSpoiled();
+            if (rowIndex >= 0) {
+                Food food = fridge.getProducts().get(rowIndex);
+                switch (columnIndex) {
+                    case 0:
+                        return food.getFoodName();
+                    case 1: {
+                        if (food.isSpoiled()) {
+                            return "нет";
+                        } else return "Да";
+                    }
+
+                }
             }
             return null;
         }
+
+        @Override
+        public String getColumnName(int column) {
+            String result = "";
+            switch (column) {
+                case 0:
+                    result = "Продукт";
+                    break;
+                case 1:
+                    result = "Свежий";
+                    break;
+            }
+            return result;
+        }
+
     }
 
     private void initFridge() {

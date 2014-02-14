@@ -34,4 +34,23 @@ public class Food {
     public int getDateWhenPutIn() {
         return dateWhenPutIn;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (!(obj instanceof Food)){
+            return false;
+        }
+        Food f = (Food)obj;
+        return (f.food == this.food && f.isSpoiled() == this.isSpoiled);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = food != null ? food.hashCode() : 0;
+        result = 31 * result + (isSpoiled ? 1 : 0);
+        result = 31 * result + dateWhenPutIn;
+        return result;
+    }
 }
