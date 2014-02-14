@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f79db102-3aca-43a1-9ccd-38c8e33e721d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/diplom/README.TXT" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/qa_1/lab1/Food.java" afterPath="$PROJECT_DIR$/src/main/java/qa_1/lab1/Food.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/qa_1/lab1/gui/Frame.java" afterPath="$PROJECT_DIR$/src/main/java/qa_1/lab1/gui/Frame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/qa_1/lab1/Fridge.java" afterPath="$PROJECT_DIR$/src/main/java/qa_1/lab1/Fridge.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/qa_1/lab1/FridgeTest.java" afterPath="$PROJECT_DIR$/src/test/java/qa_1/lab1/FridgeTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="4COURSE.iws" />
@@ -71,29 +67,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Frame.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Frame.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/qa_1/lab1/gui/Frame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="8" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0" vertical-offset="1134" max-vertical-offset="3402">
+            <state line="102" column="8" selection-start="3572" selection-end="3572" vertical-scroll-proportion="0.18" vertical-offset="1458" max-vertical-offset="3510">
               <folding>
-                <element signature="e#1961#2139#0" expanded="true" />
-                <element signature="e#2128#2129#0" expanded="true" />
-                <element signature="e#2592#3569#0" expanded="true" />
-                <element signature="e#3110#3543#0" expanded="true" />
-                <element signature="e#3524#3525#0" expanded="true" />
-                <element signature="e#3558#3559#0" expanded="true" />
-                <element signature="e#3938#4464#0" expanded="true" />
-                <element signature="e#4453#4454#0" expanded="true" />
+                <element signature="e#1626#1804#0" expanded="true" />
+                <element signature="e#1793#1794#0" expanded="true" />
+                <element signature="e#2330#3307#0" expanded="true" />
+                <element signature="e#2848#3281#0" expanded="true" />
+                <element signature="e#3262#3263#0" expanded="true" />
+                <element signature="e#3296#3297#0" expanded="true" />
+                <element signature="e#3678#4252#0" expanded="true" />
+                <element signature="e#4241#4242#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultListSelectionModel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///usr/lib/jvm/java-7-oracle/src.zip!/javax/swing/DefaultListSelectionModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="183" column="0" selection-start="5483" selection-end="5483" vertical-scroll-proportion="0.0" vertical-offset="3100" max-vertical-offset="14742">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -116,10 +103,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Fridge.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Fridge.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/qa_1/lab1/Fridge.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="35" selection-start="1936" selection-end="1936" vertical-scroll-proportion="0.85" vertical-offset="840" max-vertical-offset="2304">
+            <state line="69" column="29" selection-start="1654" selection-end="1654" vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="2304">
               <folding />
             </state>
           </provider>
@@ -749,12 +736,17 @@
       <workItem from="1392296110420" duration="670000" />
       <workItem from="1392297387307" duration="2125000" />
       <workItem from="1392320229304" duration="11286000" />
-      <workItem from="1392367462138" duration="6453000" />
+      <workItem from="1392367462138" duration="11743000" />
     </task>
+    <task id="LOCAL-00001" summary="change QA lab1. In gui can take food out from fridge. but need to change gui source code (place code not in a constructor, make better interface). Also when i press any button, ListTableModelListener start listen, that is not good. It should listen only when I specify row in a table.">
+      <created>1392376947172</created>
+      <updated>1392376947172</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30773000" />
+    <option name="totallyTimeSpent" value="36063000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="0" width="1372" height="745" extended-state="6" />
@@ -800,6 +792,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="change QA lab1. In gui can take food out from fridge. but need to change gui source code (place code not in a constructor, make better interface). Also when i press any button, ListTableModelListener start listen, that is not good. It should listen only when I specify row in a table." />
+    <option name="LAST_COMMIT_MESSAGE" value="change QA lab1. In gui can take food out from fridge. but need to change gui source code (place code not in a constructor, make better interface). Also when i press any button, ListTableModelListener start listen, that is not good. It should listen only when I specify row in a table." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -813,14 +807,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="88" column="49" selection-start="2774" selection-end="2774" vertical-scroll-proportion="0.0" vertical-offset="1584" max-vertical-offset="3330">
           <folding>
-            <element signature="e#1961#2139#0" expanded="true" />
-            <element signature="e#2128#2129#0" expanded="true" />
-            <element signature="e#2592#3569#0" expanded="true" />
-            <element signature="e#3110#3543#0" expanded="true" />
-            <element signature="e#3524#3525#0" expanded="true" />
-            <element signature="e#3558#3559#0" expanded="true" />
-            <element signature="e#3938#4464#0" expanded="true" />
-            <element signature="e#4453#4454#0" expanded="true" />
+            <element signature="e#1626#1804#0" expanded="true" />
+            <element signature="e#1793#1794#0" expanded="true" />
+            <element signature="e#2330#3307#0" expanded="true" />
+            <element signature="e#2848#3281#0" expanded="true" />
+            <element signature="e#3262#3263#0" expanded="true" />
+            <element signature="e#3296#3297#0" expanded="true" />
+            <element signature="e#3678#4252#0" expanded="true" />
+            <element signature="e#4241#4242#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -850,14 +844,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="59" column="59" selection-start="1693" selection-end="1693" vertical-scroll-proportion="0.0" vertical-offset="1062" max-vertical-offset="2718">
           <folding>
-            <element signature="e#1961#2139#0" expanded="true" />
-            <element signature="e#2128#2129#0" expanded="true" />
-            <element signature="e#2592#3569#0" expanded="true" />
-            <element signature="e#3110#3543#0" expanded="true" />
-            <element signature="e#3524#3525#0" expanded="true" />
-            <element signature="e#3558#3559#0" expanded="true" />
-            <element signature="e#3938#4464#0" expanded="true" />
-            <element signature="e#4453#4454#0" expanded="true" />
+            <element signature="e#1626#1804#0" expanded="true" />
+            <element signature="e#1793#1794#0" expanded="true" />
+            <element signature="e#2330#3307#0" expanded="true" />
+            <element signature="e#2848#3281#0" expanded="true" />
+            <element signature="e#3262#3263#0" expanded="true" />
+            <element signature="e#3296#3297#0" expanded="true" />
+            <element signature="e#3678#4252#0" expanded="true" />
+            <element signature="e#4241#4242#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -887,14 +881,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="96" selection-start="757" selection-end="757" vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="2538">
           <folding>
-            <element signature="e#1961#2139#0" expanded="true" />
-            <element signature="e#2128#2129#0" expanded="true" />
-            <element signature="e#2592#3569#0" expanded="true" />
-            <element signature="e#3110#3543#0" expanded="true" />
-            <element signature="e#3524#3525#0" expanded="true" />
-            <element signature="e#3558#3559#0" expanded="true" />
-            <element signature="e#3938#4464#0" expanded="true" />
-            <element signature="e#4453#4454#0" expanded="true" />
+            <element signature="e#1626#1804#0" expanded="true" />
+            <element signature="e#1793#1794#0" expanded="true" />
+            <element signature="e#2330#3307#0" expanded="true" />
+            <element signature="e#2848#3281#0" expanded="true" />
+            <element signature="e#3262#3263#0" expanded="true" />
+            <element signature="e#3296#3297#0" expanded="true" />
+            <element signature="e#3678#4252#0" expanded="true" />
+            <element signature="e#4241#4242#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -903,14 +897,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="96" selection-start="757" selection-end="757" vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="2538">
           <folding>
-            <element signature="e#1961#2139#0" expanded="true" />
-            <element signature="e#2128#2129#0" expanded="true" />
-            <element signature="e#2592#3569#0" expanded="true" />
-            <element signature="e#3110#3543#0" expanded="true" />
-            <element signature="e#3524#3525#0" expanded="true" />
-            <element signature="e#3558#3559#0" expanded="true" />
-            <element signature="e#3938#4464#0" expanded="true" />
-            <element signature="e#4453#4454#0" expanded="true" />
+            <element signature="e#1626#1804#0" expanded="true" />
+            <element signature="e#1793#1794#0" expanded="true" />
+            <element signature="e#2330#3307#0" expanded="true" />
+            <element signature="e#2848#3281#0" expanded="true" />
+            <element signature="e#3262#3263#0" expanded="true" />
+            <element signature="e#3296#3297#0" expanded="true" />
+            <element signature="e#3678#4252#0" expanded="true" />
+            <element signature="e#4241#4242#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -919,14 +913,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="35" selection-start="371" selection-end="406" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="2718">
           <folding>
-            <element signature="e#1961#2139#0" expanded="true" />
-            <element signature="e#2128#2129#0" expanded="true" />
-            <element signature="e#2592#3569#0" expanded="true" />
-            <element signature="e#3110#3543#0" expanded="true" />
-            <element signature="e#3524#3525#0" expanded="true" />
-            <element signature="e#3558#3559#0" expanded="true" />
-            <element signature="e#3938#4464#0" expanded="true" />
-            <element signature="e#4453#4454#0" expanded="true" />
+            <element signature="e#1626#1804#0" expanded="true" />
+            <element signature="e#1793#1794#0" expanded="true" />
+            <element signature="e#2330#3307#0" expanded="true" />
+            <element signature="e#2848#3281#0" expanded="true" />
+            <element signature="e#3262#3263#0" expanded="true" />
+            <element signature="e#3296#3297#0" expanded="true" />
+            <element signature="e#3678#4252#0" expanded="true" />
+            <element signature="e#4241#4242#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -965,14 +959,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="35" selection-start="371" selection-end="406" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="2718">
           <folding>
-            <element signature="e#1961#2139#0" expanded="true" />
-            <element signature="e#2128#2129#0" expanded="true" />
-            <element signature="e#2592#3569#0" expanded="true" />
-            <element signature="e#3110#3543#0" expanded="true" />
-            <element signature="e#3524#3525#0" expanded="true" />
-            <element signature="e#3558#3559#0" expanded="true" />
-            <element signature="e#3938#4464#0" expanded="true" />
-            <element signature="e#4453#4454#0" expanded="true" />
+            <element signature="e#1626#1804#0" expanded="true" />
+            <element signature="e#1793#1794#0" expanded="true" />
+            <element signature="e#2330#3307#0" expanded="true" />
+            <element signature="e#2848#3281#0" expanded="true" />
+            <element signature="e#3262#3263#0" expanded="true" />
+            <element signature="e#3296#3297#0" expanded="true" />
+            <element signature="e#3678#4252#0" expanded="true" />
+            <element signature="e#4241#4242#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1052,22 +1046,23 @@
     <entry file="jar:///usr/lib/jvm/java-7-oracle/src.zip!/javax/swing/DefaultListSelectionModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="183" column="0" selection-start="5483" selection-end="5483" vertical-scroll-proportion="0.0" vertical-offset="3100" max-vertical-offset="14742">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/qa_1/lab1/gui/Frame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="8" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0" vertical-offset="1134" max-vertical-offset="3402">
           <folding>
-            <element signature="e#1961#2139#0" expanded="true" />
-            <element signature="e#2128#2129#0" expanded="true" />
-            <element signature="e#2592#3569#0" expanded="true" />
-            <element signature="e#3110#3543#0" expanded="true" />
-            <element signature="e#3524#3525#0" expanded="true" />
-            <element signature="e#3558#3559#0" expanded="true" />
-            <element signature="e#3938#4464#0" expanded="true" />
-            <element signature="e#4453#4454#0" expanded="true" />
+            <element signature="e#0#30416#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1920#1921#0" expanded="false" />
+            <element signature="e#1939#1940#0" expanded="false" />
+            <element signature="e#2008#2009#0" expanded="false" />
+            <element signature="e#2030#2031#0" expanded="false" />
+            <element signature="e#2092#2093#0" expanded="false" />
+            <element signature="e#2116#2117#0" expanded="false" />
+            <element signature="e#11401#11402#0" expanded="false" />
+            <element signature="e#11453#11454#0" expanded="false" />
+            <element signature="e#12587#12588#0" expanded="false" />
+            <element signature="e#12639#12640#0" expanded="false" />
+            <element signature="e#25653#25654#0" expanded="false" />
+            <element signature="e#25687#25688#0" expanded="false" />
+            <element signature="e#25769#25770#0" expanded="false" />
+            <element signature="e#25801#25802#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1088,8 +1083,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/qa_1/lab1/Fridge.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="35" selection-start="1936" selection-end="1936" vertical-scroll-proportion="0.85" vertical-offset="840" max-vertical-offset="2304">
+        <state line="69" column="29" selection-start="1654" selection-end="1654" vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="2304">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/qa_1/lab1/gui/Frame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="8" selection-start="3572" selection-end="3572" vertical-scroll-proportion="0.18" vertical-offset="1458" max-vertical-offset="3510">
+          <folding>
+            <element signature="e#1626#1804#0" expanded="true" />
+            <element signature="e#1793#1794#0" expanded="true" />
+            <element signature="e#2330#3307#0" expanded="true" />
+            <element signature="e#2848#3281#0" expanded="true" />
+            <element signature="e#3262#3263#0" expanded="true" />
+            <element signature="e#3296#3297#0" expanded="true" />
+            <element signature="e#3678#4252#0" expanded="true" />
+            <element signature="e#4241#4242#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
