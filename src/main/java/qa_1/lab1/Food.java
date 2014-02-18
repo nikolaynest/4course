@@ -19,20 +19,12 @@ public class Food {
         return food;
     }
 
-    public void setFoodName(String food) {
-        this.food = food;
-    }
-
     public boolean isSpoiled() {
         return isSpoiled;
     }
 
     public void setSpoiled(boolean isSpoiled) {
         this.isSpoiled = isSpoiled;
-    }
-
-    public int getDateWhenPutIn() {
-        return dateWhenPutIn;
     }
 
     @Override

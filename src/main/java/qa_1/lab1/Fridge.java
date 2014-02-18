@@ -55,8 +55,9 @@ public class Fridge {
     }
 
     public void putFoodIn(Food food) {
-        if (food != null)
-            products.add(food);
+        if (food == null)
+            throw new NullPointerException(" \"null\" is not valid value for add to Fridge instance");
+        products.add(food);
     }
 
     public boolean takeFoodOut(Food food) {
@@ -114,14 +115,5 @@ public class Fridge {
 
     public int getNumOfProducts() {
         return products.size();
-    }
-
-    public Object[][] getFood() {
-        Object[][] data = new Object[products.size()][2];
-        for (int i = 0; i < products.size(); i++) {
-            data[i][0] = products.get(i).getFoodName();
-            data[i][1] = products.get(i).isSpoiled();
-        }
-        return data;
     }
 }

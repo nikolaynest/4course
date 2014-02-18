@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f79db102-3aca-43a1-9ccd-38c8e33e721d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/qa_1/lab1/Food.java" afterPath="$PROJECT_DIR$/src/main/java/qa_1/lab1/Food.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/qa_1/lab1/gui/Frame.java" afterPath="$PROJECT_DIR$/src/main/java/qa_1/lab1/gui/Frame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/qa_1/lab1/Fridge.java" afterPath="$PROJECT_DIR$/src/main/java/qa_1/lab1/Fridge.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/qa_1/lab1/FridgeTest.java" afterPath="$PROJECT_DIR$/src/test/java/qa_1/lab1/FridgeTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="4COURSE.iws" />
@@ -70,16 +73,10 @@
       <file leaf-file-name="Frame.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/qa_1/lab1/gui/Frame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="8" selection-start="3572" selection-end="3572" vertical-scroll-proportion="0.18" vertical-offset="1458" max-vertical-offset="3510">
+            <state line="80" column="0" selection-start="2617" selection-end="2617" vertical-scroll-proportion="1.7785349" vertical-offset="0" max-vertical-offset="3348">
               <folding>
-                <element signature="e#1626#1804#0" expanded="true" />
-                <element signature="e#1793#1794#0" expanded="true" />
-                <element signature="e#2330#3307#0" expanded="true" />
-                <element signature="e#2848#3281#0" expanded="true" />
-                <element signature="e#3262#3263#0" expanded="true" />
-                <element signature="e#3296#3297#0" expanded="true" />
-                <element signature="e#3678#4252#0" expanded="true" />
-                <element signature="e#4241#4242#0" expanded="true" />
+                <element signature="e#3538#4372#0" expanded="true" />
+                <element signature="e#4361#4362#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -88,7 +85,7 @@
       <file leaf-file-name="FridgeTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/qa_1/lab1/FridgeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="217" column="0" selection-start="6127" selection-end="6127" vertical-scroll-proportion="0.0" vertical-offset="3270" max-vertical-offset="3870">
+            <state line="66" column="5" selection-start="1504" selection-end="1504" vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="3744">
               <folding />
             </state>
           </provider>
@@ -97,7 +94,7 @@
       <file leaf-file-name="Food.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/qa_1/lab1/Food.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="52" selection-start="912" selection-end="912" vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="936">
+            <state line="28" column="0" selection-start="505" selection-end="505" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="864">
               <folding />
             </state>
           </provider>
@@ -106,7 +103,7 @@
       <file leaf-file-name="Fridge.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/qa_1/lab1/Fridge.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="29" selection-start="1654" selection-end="1654" vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="2304">
+            <state line="33" column="66" selection-start="751" selection-end="751" vertical-scroll-proportion="0.0" vertical-offset="1748" max-vertical-offset="2160">
               <folding />
             </state>
           </provider>
@@ -133,8 +130,8 @@
         <option value="$PROJECT_DIR$/src/main/java/system_programming/lab1/Lexer.java" />
         <option value="$PROJECT_DIR$/src/main/java/diplom/README.TXT" />
         <option value="$PROJECT_DIR$/src/test/java/qa_1/lab1/FridgeTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/qa_1/lab1/Food.java" />
         <option value="$PROJECT_DIR$/src/main/java/qa_1/lab1/Fridge.java" />
+        <option value="$PROJECT_DIR$/src/main/java/qa_1/lab1/Food.java" />
         <option value="$PROJECT_DIR$/src/main/java/qa_1/lab1/gui/Frame.java" />
       </list>
     </option>
@@ -182,6 +179,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -336,70 +335,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lab1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="4COURSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="4COURSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lab1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="4COURSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="4COURSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="diplom" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -736,17 +677,24 @@
       <workItem from="1392296110420" duration="670000" />
       <workItem from="1392297387307" duration="2125000" />
       <workItem from="1392320229304" duration="11286000" />
-      <workItem from="1392367462138" duration="11743000" />
+      <workItem from="1392367462138" duration="12409000" />
+      <workItem from="1392399764788" duration="1244000" />
+      <workItem from="1392407532418" duration="60000" />
+      <workItem from="1392717935008" duration="2754000" />
     </task>
     <task id="LOCAL-00001" summary="change QA lab1. In gui can take food out from fridge. but need to change gui source code (place code not in a constructor, make better interface). Also when i press any button, ListTableModelListener start listen, that is not good. It should listen only when I specify row in a table.">
       <created>1392376947172</created>
       <updated>1392376947172</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Lab1 works. That's enough..">
+      <created>1392383041321</created>
+      <updated>1392383041321</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36063000" />
+    <option name="totallyTimeSpent" value="40787000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="0" width="1372" height="745" extended-state="6" />
@@ -765,7 +713,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -773,10 +721,10 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2998405" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -793,7 +741,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="change QA lab1. In gui can take food out from fridge. but need to change gui source code (place code not in a constructor, make better interface). Also when i press any button, ListTableModelListener start listen, that is not good. It should listen only when I specify row in a table." />
-    <option name="LAST_COMMIT_MESSAGE" value="change QA lab1. In gui can take food out from fridge. but need to change gui source code (place code not in a constructor, make better interface). Also when i press any button, ListTableModelListener start listen, that is not good. It should listen only when I specify row in a table." />
+    <MESSAGE value="Lab1 works. That's enough.." />
+    <option name="LAST_COMMIT_MESSAGE" value="Lab1 works. That's enough.." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -805,16 +754,103 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/qa_1/lab1/gui/Frame.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="59" selection-start="4556" selection-end="4556" vertical-scroll-proportion="0.0" vertical-offset="2250" max-vertical-offset="3654">
+          <folding>
+            <element signature="e#3538#4372#0" expanded="true" />
+            <element signature="e#4361#4362#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/qa_1/lab1/FridgeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="217" column="0" selection-start="6127" selection-end="6127" vertical-scroll-proportion="0.0" vertical-offset="3906" max-vertical-offset="4014">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/qa_1/lab1/Food.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="52" selection-start="912" selection-end="912" vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="1116">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/qa_1/lab1/Fridge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="29" selection-start="1654" selection-end="1654" vertical-scroll-proportion="0.0" vertical-offset="1242" max-vertical-offset="2376">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/qa_1/lab1/gui/Frame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="59" selection-start="4556" selection-end="4556" vertical-scroll-proportion="0.0" vertical-offset="2250" max-vertical-offset="3258">
+          <folding>
+            <element signature="e#3538#4372#0" expanded="true" />
+            <element signature="e#4361#4362#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/qa_1/lab1/FridgeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="217" column="0" selection-start="6127" selection-end="6127" vertical-scroll-proportion="0.0" vertical-offset="3906" max-vertical-offset="4014">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/qa_1/lab1/Food.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="52" selection-start="912" selection-end="912" vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="1116">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/qa_1/lab1/Fridge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="29" selection-start="1654" selection-end="1654" vertical-scroll-proportion="0.0" vertical-offset="1242" max-vertical-offset="2376">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/qa_1/lab1/gui/Frame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="8" selection-start="3572" selection-end="3572" vertical-scroll-proportion="0.0" vertical-offset="1836" max-vertical-offset="3654">
+          <folding>
+            <element signature="e#3538#4372#0" expanded="true" />
+            <element signature="e#4361#4362#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/qa_1/lab1/FridgeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="217" column="0" selection-start="6127" selection-end="6127" vertical-scroll-proportion="0.0" vertical-offset="3906" max-vertical-offset="4014">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/qa_1/lab1/Food.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="52" selection-start="912" selection-end="912" vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="1116">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/qa_1/lab1/Fridge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="29" selection-start="1654" selection-end="1654" vertical-scroll-proportion="0.0" vertical-offset="1242" max-vertical-offset="2376">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/qa_1/lab1/gui/Frame.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="88" column="49" selection-start="2774" selection-end="2774" vertical-scroll-proportion="0.0" vertical-offset="1584" max-vertical-offset="3330">
           <folding>
-            <element signature="e#1626#1804#0" expanded="true" />
-            <element signature="e#1793#1794#0" expanded="true" />
-            <element signature="e#2330#3307#0" expanded="true" />
-            <element signature="e#2848#3281#0" expanded="true" />
-            <element signature="e#3262#3263#0" expanded="true" />
-            <element signature="e#3296#3297#0" expanded="true" />
-            <element signature="e#3678#4252#0" expanded="true" />
-            <element signature="e#4241#4242#0" expanded="true" />
+            <element signature="e#3538#4372#0" expanded="true" />
+            <element signature="e#4361#4362#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -844,14 +880,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="59" column="59" selection-start="1693" selection-end="1693" vertical-scroll-proportion="0.0" vertical-offset="1062" max-vertical-offset="2718">
           <folding>
-            <element signature="e#1626#1804#0" expanded="true" />
-            <element signature="e#1793#1794#0" expanded="true" />
-            <element signature="e#2330#3307#0" expanded="true" />
-            <element signature="e#2848#3281#0" expanded="true" />
-            <element signature="e#3262#3263#0" expanded="true" />
-            <element signature="e#3296#3297#0" expanded="true" />
-            <element signature="e#3678#4252#0" expanded="true" />
-            <element signature="e#4241#4242#0" expanded="true" />
+            <element signature="e#3538#4372#0" expanded="true" />
+            <element signature="e#4361#4362#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -881,14 +911,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="96" selection-start="757" selection-end="757" vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="2538">
           <folding>
-            <element signature="e#1626#1804#0" expanded="true" />
-            <element signature="e#1793#1794#0" expanded="true" />
-            <element signature="e#2330#3307#0" expanded="true" />
-            <element signature="e#2848#3281#0" expanded="true" />
-            <element signature="e#3262#3263#0" expanded="true" />
-            <element signature="e#3296#3297#0" expanded="true" />
-            <element signature="e#3678#4252#0" expanded="true" />
-            <element signature="e#4241#4242#0" expanded="true" />
+            <element signature="e#3538#4372#0" expanded="true" />
+            <element signature="e#4361#4362#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -897,14 +921,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="96" selection-start="757" selection-end="757" vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="2538">
           <folding>
-            <element signature="e#1626#1804#0" expanded="true" />
-            <element signature="e#1793#1794#0" expanded="true" />
-            <element signature="e#2330#3307#0" expanded="true" />
-            <element signature="e#2848#3281#0" expanded="true" />
-            <element signature="e#3262#3263#0" expanded="true" />
-            <element signature="e#3296#3297#0" expanded="true" />
-            <element signature="e#3678#4252#0" expanded="true" />
-            <element signature="e#4241#4242#0" expanded="true" />
+            <element signature="e#3538#4372#0" expanded="true" />
+            <element signature="e#4361#4362#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -913,14 +931,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="35" selection-start="371" selection-end="406" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="2718">
           <folding>
-            <element signature="e#1626#1804#0" expanded="true" />
-            <element signature="e#1793#1794#0" expanded="true" />
-            <element signature="e#2330#3307#0" expanded="true" />
-            <element signature="e#2848#3281#0" expanded="true" />
-            <element signature="e#3262#3263#0" expanded="true" />
-            <element signature="e#3296#3297#0" expanded="true" />
-            <element signature="e#3678#4252#0" expanded="true" />
-            <element signature="e#4241#4242#0" expanded="true" />
+            <element signature="e#3538#4372#0" expanded="true" />
+            <element signature="e#4361#4362#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -959,14 +971,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="35" selection-start="371" selection-end="406" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="2718">
           <folding>
-            <element signature="e#1626#1804#0" expanded="true" />
-            <element signature="e#1793#1794#0" expanded="true" />
-            <element signature="e#2330#3307#0" expanded="true" />
-            <element signature="e#2848#3281#0" expanded="true" />
-            <element signature="e#3262#3263#0" expanded="true" />
-            <element signature="e#3296#3297#0" expanded="true" />
-            <element signature="e#3678#4252#0" expanded="true" />
-            <element signature="e#4241#4242#0" expanded="true" />
+            <element signature="e#3538#4372#0" expanded="true" />
+            <element signature="e#4361#4362#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1008,9 +1014,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="52" selection-start="647" selection-end="647" vertical-scroll-proportion="0.54" vertical-offset="0" max-vertical-offset="600">
-          <folding />
-        </state>
+        <state line="18" column="52" selection-start="647" selection-end="647" vertical-scroll-proportion="0.54" vertical-offset="0" max-vertical-offset="600" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/sys_prog/lexer.txt">
@@ -1045,61 +1049,36 @@
     </entry>
     <entry file="jar:///usr/lib/jvm/java-7-oracle/src.zip!/javax/swing/DefaultListSelectionModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="183" column="0" selection-start="5483" selection-end="5483" vertical-scroll-proportion="0.0" vertical-offset="3100" max-vertical-offset="14742">
-          <folding>
-            <element signature="e#0#30416#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1920#1921#0" expanded="false" />
-            <element signature="e#1939#1940#0" expanded="false" />
-            <element signature="e#2008#2009#0" expanded="false" />
-            <element signature="e#2030#2031#0" expanded="false" />
-            <element signature="e#2092#2093#0" expanded="false" />
-            <element signature="e#2116#2117#0" expanded="false" />
-            <element signature="e#11401#11402#0" expanded="false" />
-            <element signature="e#11453#11454#0" expanded="false" />
-            <element signature="e#12587#12588#0" expanded="false" />
-            <element signature="e#12639#12640#0" expanded="false" />
-            <element signature="e#25653#25654#0" expanded="false" />
-            <element signature="e#25687#25688#0" expanded="false" />
-            <element signature="e#25769#25770#0" expanded="false" />
-            <element signature="e#25801#25802#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="183" column="0" selection-start="5483" selection-end="5483" vertical-scroll-proportion="0.0" vertical-offset="3100" max-vertical-offset="14742" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/qa_1/lab1/FridgeTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/qa_1/lab1/Fridge.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="217" column="0" selection-start="6127" selection-end="6127" vertical-scroll-proportion="0.0" vertical-offset="3414" max-vertical-offset="4014">
+        <state line="33" column="66" selection-start="751" selection-end="751" vertical-scroll-proportion="0.0" vertical-offset="1748" max-vertical-offset="2160">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/qa_1/lab1/Food.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="52" selection-start="912" selection-end="912" vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="936">
+        <state line="28" column="0" selection-start="505" selection-end="505" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="864">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/qa_1/lab1/Fridge.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/qa_1/lab1/FridgeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="29" selection-start="1654" selection-end="1654" vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="2304">
+        <state line="66" column="5" selection-start="1504" selection-end="1504" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3744">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/qa_1/lab1/gui/Frame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="8" selection-start="3572" selection-end="3572" vertical-scroll-proportion="0.18" vertical-offset="1458" max-vertical-offset="3510">
+        <state line="80" column="0" selection-start="2617" selection-end="2617" vertical-scroll-proportion="1.7785349" vertical-offset="0" max-vertical-offset="3348">
           <folding>
-            <element signature="e#1626#1804#0" expanded="true" />
-            <element signature="e#1793#1794#0" expanded="true" />
-            <element signature="e#2330#3307#0" expanded="true" />
-            <element signature="e#2848#3281#0" expanded="true" />
-            <element signature="e#3262#3263#0" expanded="true" />
-            <element signature="e#3296#3297#0" expanded="true" />
-            <element signature="e#3678#4252#0" expanded="true" />
-            <element signature="e#4241#4242#0" expanded="true" />
+            <element signature="e#3538#4372#0" expanded="true" />
+            <element signature="e#4361#4362#0" expanded="true" />
           </folding>
         </state>
       </provider>

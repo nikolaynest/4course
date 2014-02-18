@@ -26,7 +26,7 @@ public class Frame extends JFrame {
     JLabel hasFoodLabel;
     final MyTableModel myTableModel = new MyTableModel();
 
-    public JPanel firstPanel(){
+    public JPanel firstPanel() {
         JPanel header = new JPanel();
         label = new JLabel("Включен");
         button = new JToggleButton("ON/OFF");
@@ -49,7 +49,7 @@ public class Frame extends JFrame {
         return header;
     }
 
-    public JPanel secondPanel(){
+    public JPanel secondPanel() {
         JPanel infoPanel = new JPanel();
         hasFoodLabel = new JLabel("Холодильник пуст");
         JButton updateButton = new JButton("Проверить продукты");
@@ -64,7 +64,7 @@ public class Frame extends JFrame {
         return infoPanel;
     }
 
-    public JPanel thirdPanel(){
+    public JPanel thirdPanel() {
         JPanel foodPanel = new JPanel();
         final JButton delete = new JButton("Вынуть из холодильника");
         delete.setEnabled(false);
@@ -77,9 +77,7 @@ public class Frame extends JFrame {
 
                 delete.setEnabled(true);
                 final int row = listTable.getSelectedRow();
-                System.out.println("row = " + row);
                 String name = (String) listTable.getValueAt(row, 0);
-                System.out.println(row + " " + name + " " + listTable.getValueAt(row, 1));
                 final Food f = new Food(name, 2);
                 delete.addActionListener(new ActionListener() {
                     @Override
@@ -105,15 +103,19 @@ public class Frame extends JFrame {
         foodButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                fridge.putFoodIn(new Food(foodName.getText(),
-                        Calendar.getInstance().get(Calendar.DAY_OF_YEAR)));
-                foodName.setText("");
-                if (!fridge.isEmpty()) {
-                    hasFoodLabel.setText("В холодильнике есть продукты");
+                if (foodName.getText().equals("")) {
+                    JOptionPane.showMessageDialog(null,"Введите название продукта", "Ошибка ввода", JOptionPane.ERROR_MESSAGE);
                 } else {
-                    hasFoodLabel.setText("Холодильник пуст");
+                    fridge.putFoodIn(new Food(foodName.getText(),
+                            Calendar.getInstance().get(Calendar.DAY_OF_YEAR)));
+                    foodName.setText("");
+                    if (!fridge.isEmpty()) {
+                        hasFoodLabel.setText("В холодильнике есть продукты");
+                    } else {
+                        hasFoodLabel.setText("Холодильник пуст");
+                    }
+                    myTableModel.fireTableDataChanged();
                 }
-                myTableModel.fireTableDataChanged();
             }
         });
         Box box = Box.createVerticalBox();

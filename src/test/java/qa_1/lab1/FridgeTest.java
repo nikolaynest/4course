@@ -56,20 +56,13 @@ public class FridgeTest {
         assertFalse(fridge.isEmpty());
     }
 
-    @Test
+    @Test(expected = NullPointerException.class)
     public void testPutFoodInNull() {
         fridge.putFoodIn(null);
-        assertTrue(fridge.isEmpty());
     }
 
     @Test
     public void testHasSpoiledProductsFalse() {
-        assertFalse(fridge.hasSpoiledProducts());
-    }
-
-    @Test
-    public void testHasSpoiledProductsNull() {
-        fridge.putFoodIn(null);
         assertFalse(fridge.hasSpoiledProducts());
     }
 
