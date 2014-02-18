@@ -38,7 +38,7 @@ public class FridgeTest {
         assertFalse(fridge.isTurnOn());
     }
 
-    @Test public void testTurnOnAfterTurnOff(){
+    @Test public void testTurnOnAfterTurnOffTrue(){
         fridge.turnOn();
         fridge.turnOff();
         fridge.turnOn();
@@ -46,18 +46,22 @@ public class FridgeTest {
     }
 
     @Test
-    public void testIsEmpty() {
+    public void testIsEmptyTrue() {
         assertTrue(fridge.isEmpty());
     }
-
     @Test
-    public void testIsEmptyAfterPutFoodIn() {
+    public void testIsEmptyAfterTurnOn() {
+        fridge.turnOn();
+        assertTrue(fridge.isEmpty());
+    }
+    @Test
+    public void testIsEmptyAfterPutFoodInFalse() {
         fridge.putFoodIn(new Food("Meat", Calendar.getInstance().get(Calendar.DAY_OF_YEAR)));
         assertFalse(fridge.isEmpty());
     }
 
     @Test(expected = NullPointerException.class)
-    public void testPutFoodInNull() {
+    public void testPutFoodInNullException() {
         fridge.putFoodIn(null);
     }
 
@@ -75,7 +79,7 @@ public class FridgeTest {
     }
 
     @Test
-    public void testHashMap() {
+    public void testHashMapEqualsReturnTrue() {
         HashMap<Food, Long> products = new HashMap<Food, Long>();
         Food food = new Food("Cheese", Calendar.getInstance().get(Calendar.DAY_OF_YEAR));
         products.put(food, System.currentTimeMillis());
@@ -89,7 +93,7 @@ public class FridgeTest {
     }
 
     @Test
-    public void testTakeFoodOutTwo() {
+    public void testTakeFoodOutWithTwoFood() {
         Food food = new Food("Fish", Calendar.getInstance().get(Calendar.DAY_OF_YEAR));
         Food food1 = new Food("Tomato", Calendar.getInstance().get(Calendar.DAY_OF_YEAR));
         fridge.putFoodIn(food);
@@ -100,14 +104,14 @@ public class FridgeTest {
     }
 
     @Test(expected = NullPointerException.class)
-    public void testTakeFoodOutNull() {
+    public void testTakeFoodOutNullException() {
         Food food = new Food("Fish", Calendar.getInstance().get(Calendar.DAY_OF_YEAR));
         fridge.putFoodIn(food);
         fridge.takeFoodOut(null);
     }
 
     @Test
-    public void testTakeFoodOutOne() {
+    public void testTakeFoodOutOneIsEmptyFalse() {
         Food food = new Food("Fish", Calendar.getInstance().get(Calendar.DAY_OF_YEAR));
         Food food1 = new Food("Tomato", Calendar.getInstance().get(Calendar.DAY_OF_YEAR));
         fridge.putFoodIn(food);
@@ -116,32 +120,29 @@ public class FridgeTest {
         assertFalse(fridge.isEmpty());
     }
 
-    @Test
-            (expected = java.util.ConcurrentModificationException.class)
-    public void testTakeFoodOutWithException() {
+    @Test(expected = java.util.ConcurrentModificationException.class)
+    public void testTakeFoodOutForeachWithException() {
         Food food = new Food("f1", Calendar.DAY_OF_YEAR);
         Food food1 = new Food("f2", Calendar.DAY_OF_YEAR);
         Food f = new Food("f3", Calendar.DAY_OF_YEAR);
-
         HashMap<Food, Integer> products = new HashMap<Food, Integer>();
         products.put(food, Calendar.DAY_OF_YEAR);
         products.put(food1, Calendar.DAY_OF_YEAR);
         products.put(f, Calendar.DAY_OF_YEAR);
-
         for (Food p : products.keySet()) {
             if (p.equals(food)) {
                 products.remove(p);
             }
         }
     }
-
-    @Ignore
-    @Test
-    public void testDifferenceDate() {
-        Calendar c1 = Calendar.getInstance();
-        c1.get(Calendar.DAY_OF_YEAR);
-        Calendar c2 = c1;
-    }
+//
+//    @Ignore
+//    @Test
+//    public void testDifferenceDate() {
+//        Calendar c1 = Calendar.getInstance();
+//        c1.get(Calendar.DAY_OF_YEAR);
+//        Calendar c2 = c1;
+//    }
 
     @Test
     public void testGetNumOfSpoiledProductsOne() {
@@ -152,7 +153,7 @@ public class FridgeTest {
     }
 
     @Test
-    public void testGetNumOfSpoiledProductsMany() {
+    public void testGetNumOfSpoiledProducts100() {
         for (int i = 0; i < 100; i++) {
             Food f = new Food(Integer.toString(i) + " food", Calendar.getInstance().get(Calendar.DAY_OF_YEAR));
             f.setSpoiled(true);
@@ -162,13 +163,7 @@ public class FridgeTest {
     }
 
     @Test
-    public void testIsEmptyAfterTurnOn() {
-        fridge.turnOn();
-        assertTrue(fridge.isEmpty());
-    }
-
-    @Test
-    public void testHasSpoiledProductsAfterPutFoodIn() {
+    public void testHasSpoiledProductsAfterPutFoodIn7DaysFalse() {
         fridge.turnOn();
         Food f = new Food("f", today - 7);
         fridge.putFoodIn(f);
@@ -176,7 +171,7 @@ public class FridgeTest {
     }
 
     @Test
-    public void testHasSpoiledProdAfterWeek() {
+    public void testHasSpoiledProdAfterWeekTrue() {
         fridge.turnOn();
         Food f = new Food("f", today - 8);
         fridge.putFoodIn(f);
@@ -184,7 +179,7 @@ public class FridgeTest {
     }
 
     @Test
-    public void testHasSpoiledProdAfterDayWhenTurnOff() {
+    public void testHasSpoiledProdAfterDayWhenTurnOffFalse() {
         fridge.turnOn();
         Food f = new Food("f", today - 1);
         fridge.putFoodIn(f);
@@ -193,7 +188,7 @@ public class FridgeTest {
     }
 
     @Test
-    public void testHasSpoiledProdAfter2DaysWhenTurnOff() {
+    public void testHasSpoiledProdAfter2DaysWhenTurnOffTrue() {
         fridge.turnOn();
         Food f = new Food("f", today - 2);
         fridge.putFoodIn(f);
@@ -201,7 +196,7 @@ public class FridgeTest {
         assertTrue(fridge.hasSpoiledProducts());
     }
 
-    @Test public void testTakeFoodOutDoesEqual(){
+    @Test public void testTakeFoodOutDoesEqualTrue(){
         Food f1 = new Food("food", 1);
         Food f2 = new Food("food", 1);
         fridge.putFoodIn(f1);
