@@ -8,6 +8,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.StringTokenizer;
 
 import static org.junit.Assert.*;
@@ -41,7 +42,14 @@ public class LexerTest {
             System.out.println(line);
         }
 
-        assertEquals(9,list.size());
+        assertEquals(6,list.size());
     }
 
+    @Test public void testWordsFromGrid() throws IOException {
+        HashMap<String, String> grid = lexer.wordsFromGrid(1);
+        for (String key : grid.keySet()){
+            System.out.println("key="+key+" val="+grid.get(key));
+        }
+        assertEquals(6, grid.size());
+    }
 }

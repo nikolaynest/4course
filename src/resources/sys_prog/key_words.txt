@@ -1,9 +1,6 @@
 import
-public
-private
-protected
 class
+public
+protected
+private
 void
-return
-String
-int
