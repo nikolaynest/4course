@@ -33,7 +33,7 @@ public class Lexer {
      * @throws IOException
      */
     public HashMap<String, String> wordsFromGrid(int i) throws IOException {
-        if (i != 1 || i != 2)throw new IllegalArgumentException("argument 'i' must be 1 or 2");
+        if (i != 1 && i != 2)throw new IllegalArgumentException("argument 'i' must be 1 or 2");
         HashMap<String, String> grid = new HashMap<String, String>();
         InputStream inputStream = new FileInputStream(KEY_WORDS_FILE);
         Properties properties = new Properties();
@@ -43,9 +43,9 @@ public class Lexer {
             Character ch = val.charAt(0);
             int ascii = (int)ch;
             if(i == 1){
-                grid.put(word, new Integer(ascii).toString());
-            } else if (i == 2){
-                grid.put(new Integer(ascii).toString(), word);
+                grid.put(word, Integer.toString(ascii));
+            } else {
+                grid.put(Integer.toString(ascii), word);
             }
         }
         return grid;
@@ -72,7 +72,7 @@ public class Lexer {
             while (token.hasMoreTokens()) {
                 String word = token.nextToken();
                 if (keyWords.containsKey(word)) {
-                    word = keyWords.get(word).toString();
+                    word = keyWords.get(word);
                 }
                 pw.print(word);
                 pw.print(" ");
