@@ -136,7 +136,7 @@ public class Frame extends JFrame {
     public Frame() {
         super("ХОЛОДИЛЬНИК");
         initFridge();
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(400, 500);
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
@@ -179,13 +179,15 @@ public class Frame extends JFrame {
 
         @Override
         public String getColumnName(int column) {
-            String result = "";
+            String result = null;
             switch (column) {
                 case 0:
                     result = "Продукт";
                     break;
                 case 1:
                     result = "Свежий";
+                    break;
+                default:
                     break;
             }
             return result;

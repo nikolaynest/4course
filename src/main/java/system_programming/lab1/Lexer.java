@@ -1,6 +1,7 @@
 package system_programming.lab1;
 
 import java.io.*;
+import java.nio.charset.Charset;
 import java.util.*;
 
 /**
@@ -13,9 +14,9 @@ import java.util.*;
  */
 public class Lexer {
 
-    public final File KEY_WORDS = new File("/home/nikolay/IdeaProjects/4COURSE/src/resources/sys_prog/key_words.txt");
+    public final File KEY_WORDS = new File("key_words.txt");
     public final File KEY_WORDS_FILE =
-            new File("/home/nikolay/IdeaProjects/4COURSE/src/resources/sys_prog/key_words.properties");
+            new File(System.getProperty("user.home")+"/IdeaProjects/4COURSE/src/resources/sys_prog/key_words.properties");
     private static final File SOURCE =
             new File("/home/nikolay/IdeaProjects/4COURSE/src/main/java/system_programming/lab1/Lexer.java");
     private static final File DEST =
@@ -27,28 +28,38 @@ public class Lexer {
     /**
      * Create HashMap which will contain key words from file
      * and their position number in ascii representation
+     *
      * @param i sets the order of HashMap: if 'i' equals 1 than key is word and value word's number
      *          if 'i' equals 2 than key is number and value is the word
      * @return HashMap
      * @throws IOException
      */
     public HashMap<String, String> wordsFromGrid(int i) throws IOException {
-        if (i != 1 && i != 2)throw new IllegalArgumentException("argument 'i' must be 1 or 2");
-        HashMap<String, String> grid = new HashMap<String, String>();
-        InputStream inputStream = new FileInputStream(KEY_WORDS_FILE);
-        Properties properties = new Properties();
-        properties.load(inputStream);
-        for (String word : properties.stringPropertyNames()) {
-            String val = properties.getProperty(word);
-            Character ch = val.charAt(0);
-            int ascii = (int)ch;
-            if(i == 1){
-                grid.put(word, Integer.toString(ascii));
-            } else {
-                grid.put(Integer.toString(ascii), word);
+        if (i != 1 && i != 2) throw new IllegalArgumentException("argument 'i' must be 1 or 2");
+        HashMap<String, String> grid = new HashMap<>();
+        try (
+                InputStream inputStream = new FileInputStream(KEY_WORDS_FILE)
+        ){
+            Properties properties = new Properties();
+            properties.load(inputStream);
+            for (String word : properties.stringPropertyNames()) {
+                String val = properties.getProperty(word);
+                if (i == 1) {
+                    grid.put(word, convertToAscii(val));
+                } else {
+                    grid.put(convertToAscii(val), word);
+                }
             }
         }
         return grid;
+    }
+
+    private String convertToAscii(String val) {
+        StringBuilder sb = new StringBuilder();
+        for (char ch : val.toCharArray()) {
+            sb.append((int) ch);
+        }
+        return sb.toString();
     }
 
     /**
@@ -64,8 +75,10 @@ public class Lexer {
     public void rewrite(File source, File dest, int variant) throws IOException {
         HashMap<String, String> keyWords = wordsFromGrid(variant);
         StringTokenizer token;
-        BufferedReader br = new BufferedReader(new FileReader(source));
-        PrintWriter pw = new PrintWriter(dest);
+        BufferedReader br = new BufferedReader(new InputStreamReader(
+                new FileInputStream(source), Charset.forName("UTF-8")));
+        OutputStreamWriter osw = new OutputStreamWriter(new FileOutputStream(dest), Charset.forName("UTF-8"));
+//        PrintWriter pw = new PrintWriter(dest);
         String line;
         while ((line = br.readLine()) != null) {
             token = new StringTokenizer(line, " \t\r\n");
@@ -74,11 +87,14 @@ public class Lexer {
                 if (keyWords.containsKey(word)) {
                     word = keyWords.get(word);
                 }
-                pw.print(word);
-                pw.print(" ");
+                osw.write(word);
+                osw.write(" ");
+//                pw.print(word);
+//                pw.print(" ");
             }
         }
-        pw.close();
+//        pw.close();
+        osw.close();
         br.close();
     }
 
@@ -133,7 +149,7 @@ public class Lexer {
      */
     @Deprecated
     private ArrayList<String> getKeyWordsFromFile() throws IOException {
-        ArrayList<String> keyWords = new ArrayList<String>();
+        ArrayList<String> keyWords = new ArrayList<>();
         String line;
         BufferedReader br = new BufferedReader(new FileReader(KEY_WORDS));
         while ((line = br.readLine()) != null) {
@@ -142,9 +158,18 @@ public class Lexer {
         br.close();
         return keyWords;
     }
+
     public static void main(String[] args) throws IOException {
         Lexer lexer = new Lexer();
         lexer.rewrite(SOURCE, DEST, 1);
-        lexer.rewrite(DEST, BINARY_DEST,2);
+        lexer.rewrite(DEST, BINARY_DEST, 2);
+//        for (int i = 0; i < 20;i++){
+//            String s = lexer.convertToAscii(Integer.toString(i));
+//            System.out.println(s);
+//        }
+
+        for (int i = 0; i < 256; i++) {
+            System.out.println(i + "char: " + Character.toString((char) i));
+        }
     }
 }

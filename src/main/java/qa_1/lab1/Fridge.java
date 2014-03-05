@@ -7,12 +7,10 @@ import java.util.*;
  */
 public class Fridge {
 
-    private final int STORAGE_LIFE_TURN_ON = 7;
-    private final int STORAGE_LIFE_TURN_OFF = 1;
+    private final static int STORAGE_LIFE_TURN_ON = 7;
+    private final static int STORAGE_LIFE_TURN_OFF = 1;
 
     private boolean isTurnOn;
-    private boolean isEmpty;
-    private boolean hasSpoiledFood;
 
     public ArrayList<Food> getProducts() {
         return products;
@@ -24,7 +22,6 @@ public class Fridge {
     public Fridge() {
         this.isTurnOn = true;
         this.products = new ArrayList<Food>();
-        this.isEmpty = isEmpty();
         storageLife = STORAGE_LIFE_TURN_ON;
     }
 
@@ -32,7 +29,6 @@ public class Fridge {
         isTurnOn = true;
         products = new ArrayList<Food>();
         products.add(food);
-        isEmpty = isEmpty();
         storageLife = STORAGE_LIFE_TURN_ON;
     }
 

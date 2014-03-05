@@ -41,7 +41,7 @@ public class LexerTest {
             list.add(line);
             System.out.println(line);
         }
-
+        br.close();
         assertEquals(6,list.size());
     }
 

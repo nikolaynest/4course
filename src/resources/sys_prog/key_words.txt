@@ -4,3 +4,17 @@ public
 protected
 private
 void
+final
+new
+int
+while
+for
+if
+throw
+throws
+static
+else
+return
+main
+char
+@Deprecated

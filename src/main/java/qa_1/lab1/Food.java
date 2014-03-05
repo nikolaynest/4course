@@ -29,13 +29,13 @@ public class Food {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
+        if (this != obj)
+            return false;
         if (!(obj instanceof Food)){
             return false;
         }
         Food f = (Food)obj;
-        return (f.food == this.food && f.isSpoiled() == this.isSpoiled);
+        return (food.equals(f.food) && isSpoiled == f.isSpoiled());
     }
 
     @Override

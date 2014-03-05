@@ -1,6 +1,7 @@
-package qa_1.lab2;
+package system_programming.lab2;
 
 import java.io.*;
+import java.nio.charset.Charset;
 import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -11,7 +12,8 @@ import java.util.regex.Pattern;
 public class RealNumbersRegex {
 
     public void showMatchesFromFile(File file) throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader(file));
+        BufferedReader br = new BufferedReader(new InputStreamReader(
+                new FileInputStream(file), Charset.forName("UTF-8")));
         StringTokenizer token;
         String line;
         int lineNumber = 1;
@@ -25,6 +27,7 @@ public class RealNumbersRegex {
             }
             lineNumber++;
         }
+        br.close();
     }
 
     public boolean printMatches(String str){
