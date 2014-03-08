@@ -19,9 +19,10 @@ public class Lab1Main {
         useValues.printValues();
         double hGap = ReadValuesFromFile.roundResult(useValues.getH(), 4);
         int numIntervals = useValues.getIntervals();
-
-        Intervals i = new Intervals(doubles,hGap,numIntervals);
-        i.printInterval(i.getIntervals(), 0);
-
+        System.out.println("hGap="+hGap+"\tnumIntervals="+numIntervals);
+//        System.out.println("doubles:" + doubles.toString());
+        Intervals i = new Intervals(doubles,hGap,numIntervals) ;
+//        i.printList(i.inter());
+        i.printIntervals(i.getIntervals());
     }
 }
