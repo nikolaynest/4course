@@ -21,8 +21,8 @@ public class Lab1Main {
         int numIntervals = useValues.getIntervals();
         System.out.println("hGap="+hGap+"\tnumIntervals="+numIntervals);
 //        System.out.println("doubles:" + doubles.toString());
-        Intervals i = new Intervals(doubles,hGap,numIntervals) ;
+//        Intervals i = new Intervals(doubles,hGap,numIntervals) ;
 //        i.printList(i.inter());
-        i.printIntervals(i.getIntervals());
+//        i.printIntervals(i.getIntervals());
     }
 }

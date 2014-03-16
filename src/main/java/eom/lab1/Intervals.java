@@ -13,6 +13,10 @@ public class Intervals {
     private double hGap;
     private int numIntervals;
 
+    public double[] laplasFunction = {0.25860, 0.22818, 0.18967, 0.15852, 0.11924,
+            0.07966, 0.04784, 0.00798, 0.00000, 0.03988,
+            0.07966, 0.11134, 0.15069, 0.18191, 0.25860};
+
     public Intervals(ArrayList<Double> doubles, double hGap, int numIntervals) {
         this.doubles = doubles;
         this.hGap = hGap;
@@ -83,6 +87,7 @@ public class Intervals {
         }
         return intervals;
     }
+
 
     public void printIntervals(double[][] intervals) {
         System.out.println("INTERVALS:");
