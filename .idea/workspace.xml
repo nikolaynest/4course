@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f79db102-3aca-43a1-9ccd-38c8e33e721d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/system_programming/lab3/DKA.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/system_programming/lab3/MyDKA.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/system_programming/lab3/MyRules.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/system_programming/lab3/NotValidSymbolException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/system_programming/lab3/Production.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/system_programming/lab3/Rules.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/system_programming/lab3/TestDKA.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/system_programming/lab3/MyDKA.java" afterPath="$PROJECT_DIR$/src/main/java/system_programming/lab3/MyDKA.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="4COURSE.iws" />
@@ -87,19 +81,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyDKA.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MyDKA.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/system_programming/lab3/MyDKA.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="18" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="1836">
+            <state line="18" column="0" selection-start="385" selection-end="385" vertical-scroll-proportion="-0.09625668" vertical-offset="378" max-vertical-offset="1782">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestDKA.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TestDKA.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/system_programming/lab3/TestDKA.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="62" selection-start="1186" selection-end="1186" vertical-scroll-proportion="0.094076656" vertical-offset="702" max-vertical-offset="1296">
+            <state line="42" column="62" selection-start="1186" selection-end="1186" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1296">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -164,8 +158,8 @@
         <option value="$PROJECT_DIR$/src/main/java/system_programming/lab3/NotValidSimbolException.java" />
         <option value="$PROJECT_DIR$/src/main/java/system_programming/lab3/NotValidSymbolException.java" />
         <option value="$PROJECT_DIR$/src/main/java/system_programming/lab3/DKA.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system_programming/lab3/MyDKA.java" />
         <option value="$PROJECT_DIR$/src/main/java/system_programming/lab3/TestDKA.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system_programming/lab3/MyDKA.java" />
       </list>
     </option>
   </component>
@@ -1081,7 +1075,7 @@
       <workItem from="1395055017825" duration="500000" />
       <workItem from="1395077688106" duration="595000" />
       <workItem from="1395178090839" duration="133000" />
-      <workItem from="1395655153440" duration="20668000" />
+      <workItem from="1395655153440" duration="21202000" />
     </task>
     <task id="LOCAL-00001" summary="change QA lab1. In gui can take food out from fridge. but need to change gui source code (place code not in a constructor, make better interface). Also when i press any button, ListTableModelListener start listen, that is not good. It should listen only when I specify row in a table.">
       <created>1392376947172</created>
@@ -1127,11 +1121,15 @@
       <created>1394983817689</created>
       <updated>1394983817689</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="lab3 system prog - DKA(Детерминированный конечный автомат)">
+      <created>1395683548293</created>
+      <updated>1395683548293</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202050000" />
+    <option name="totallyTimeSpent" value="202584000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1209,7 +1207,8 @@
     <MESSAGE value="Start lab #1 EOM" />
     <MESSAGE value="EOM LAB1 create intervals&#10;" />
     <MESSAGE value="save diplom 16/03&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="save diplom 16/03&#10;" />
+    <MESSAGE value="lab3 system prog - DKA(Детерминированный конечный автомат)" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab3 system prog - DKA(Детерминированный конечный автомат)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1475,13 +1474,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system_programming/lab3/MyDKA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="18" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="1836">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/system_programming/lab3/MyRules.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="39" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576">
@@ -1493,10 +1485,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/system_programming/lab3/TestDKA.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="62" selection-start="1186" selection-end="1186" vertical-scroll-proportion="0.094076656" vertical-offset="702" max-vertical-offset="1296">
+        <state line="42" column="62" selection-start="1186" selection-end="1186" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1296">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system_programming/lab3/MyDKA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="385" selection-end="385" vertical-scroll-proportion="-0.09625668" vertical-offset="378" max-vertical-offset="1782">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -16,14 +16,11 @@ public class MyDKA extends DKA {
     public void checkTape() {
         char[] charTape = tape.toCharArray();
         Character current;
-
         Character currentState = beginState;
-        Character newState;
         for (int i = 0; i < charTape.length; i++) {
             current = charTape[i];
             try {
-                newState = transitionFunction(currentState, current);
-                currentState = newState;
+                currentState = transitionFunction(currentState, current);
                 if (currentState == null){
                     for(Character ch: endStates){
                         if (current == ch){
