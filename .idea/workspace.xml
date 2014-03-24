@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f79db102-3aca-43a1-9ccd-38c8e33e721d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/diplom/diplom.odt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eom/lab1/Intervals.java" afterPath="$PROJECT_DIR$/src/main/java/eom/lab1/Intervals.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eom/lab1/Lab1Main.java" afterPath="$PROJECT_DIR$/src/main/java/eom/lab1/Lab1Main.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/system_programming/lab3/DKA.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/system_programming/lab3/MyDKA.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/system_programming/lab3/MyRules.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/system_programming/lab3/NotValidSymbolException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/system_programming/lab3/Production.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/system_programming/lab3/Rules.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/system_programming/lab3/TestDKA.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="4COURSE.iws" />
@@ -74,38 +78,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ReadValuesFromFile.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/eom/lab1/ReadValuesFromFile.java">
+      <file leaf-file-name="DKA.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/system_programming/lab3/DKA.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="32" selection-start="876" selection-end="876" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="1602">
+            <state line="12" column="0" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UseValues.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/eom/lab1/UseValues.java">
+      <file leaf-file-name="MyDKA.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/system_programming/lab3/MyDKA.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="2250">
+            <state line="11" column="18" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="1836">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Lab1Main.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/eom/lab1/Lab1Main.java">
+      <file leaf-file-name="TestDKA.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/system_programming/lab3/TestDKA.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="39" selection-start="902" selection-end="902" vertical-scroll-proportion="0.71875" vertical-offset="0" max-vertical-offset="594">
-              <folding />
+            <state line="42" column="62" selection-start="1186" selection-end="1186" vertical-scroll-proportion="0.094076656" vertical-offset="702" max-vertical-offset="1296">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Intervals.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/eom/lab1/Intervals.java">
+      <file leaf-file-name="MyRules.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/system_programming/lab3/MyRules.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="69" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1944">
-              <folding />
+            <state line="15" column="39" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -149,6 +157,15 @@
         <option value="$PROJECT_DIR$/src/main/java/eom/lab1/UseValues.java" />
         <option value="$PROJECT_DIR$/src/main/java/eom/lab1/Intervals.java" />
         <option value="$PROJECT_DIR$/src/main/java/eom/lab1/Lab1Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system_programming/lab3/Production.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system_programming/lab3/Rules.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system_programming/lab3/MyRules.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system_programming/lab3/NoSimbolException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system_programming/lab3/NotValidSimbolException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system_programming/lab3/NotValidSymbolException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system_programming/lab3/DKA.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system_programming/lab3/MyDKA.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system_programming/lab3/TestDKA.java" />
       </list>
     </option>
   </component>
@@ -271,6 +288,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -429,6 +448,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="lab3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="4COURSE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="4COURSE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="system_programming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="lab2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -539,8 +588,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -559,7 +606,7 @@
     <property name="FullScreen" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
-    <property name="SearchEverywhereHistory" value="M" />
+    <property name="SearchEverywhereHistory" value="S&#10;+&#10;M" />
     <property name="options.lastSelected" value="project.propCompiler" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -579,7 +626,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.eomLab1Main">
+  <component name="RunManager" selected="Application.testDKA">
     <configuration default="false" name="Frame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -852,9 +899,9 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="eomLab1Main" type="Application" factoryName="Application">
+    <configuration default="false" name="testDKA" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="eom.lab1.Lab1Main" />
+      <option name="MAIN_CLASS_NAME" value="system_programming.lab3.TestDKA" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -946,11 +993,11 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Application.Regex" />
-      <item index="1" class="java.lang.String" itemvalue="Application.eomLab1Main" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.fridge" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.LexerTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.LogicTest" />
-      <item index="5" class="java.lang.String" itemvalue="Application.Frame" />
+      <item index="1" class="java.lang.String" itemvalue="Application.testDKA" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Frame" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.fridge" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.LexerTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.LogicTest" />
     </list>
     <recent_temporary>
       <list size="1">
@@ -1030,7 +1077,11 @@
       <workItem from="1394282578557" duration="40000" />
       <workItem from="1394720363187" duration="193000" />
       <workItem from="1394748634240" duration="74000" />
-      <workItem from="1394983290927" duration="477000" />
+      <workItem from="1394983290927" duration="566000" />
+      <workItem from="1395055017825" duration="500000" />
+      <workItem from="1395077688106" duration="595000" />
+      <workItem from="1395178090839" duration="133000" />
+      <workItem from="1395655153440" duration="20668000" />
     </task>
     <task id="LOCAL-00001" summary="change QA lab1. In gui can take food out from fridge. but need to change gui source code (place code not in a constructor, make better interface). Also when i press any button, ListTableModelListener start listen, that is not good. It should listen only when I specify row in a table.">
       <created>1392376947172</created>
@@ -1072,11 +1123,15 @@
       <created>1394240021374</created>
       <updated>1394240021374</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="save diplom 16/03&#10;">
+      <created>1394983817689</created>
+      <updated>1394983817689</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="180065000" />
+    <option name="totallyTimeSpent" value="202050000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1100,7 +1155,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="0" width="1372" height="745" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277592" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1115,19 +1170,19 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.9632107" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32612312" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21827795" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.83361065" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.71048254" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="107" y="87" width="1172" height="545" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32833335" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32608697" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1153,7 +1208,8 @@
     <MESSAGE value="just commit&#10;" />
     <MESSAGE value="Start lab #1 EOM" />
     <MESSAGE value="EOM LAB1 create intervals&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="EOM LAB1 create intervals&#10;" />
+    <MESSAGE value="save diplom 16/03&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="save diplom 16/03&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1163,41 +1219,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/qa_1/lab1/gui/Frame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="96" selection-start="757" selection-end="757" vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="2538" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/qa_1/lab1/gui/Frame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="35" selection-start="371" selection-end="406" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="2718" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system_programming/lab1/Lexer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="8" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="1476" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/sys_prog/LexerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="38" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.0" vertical-offset="362" max-vertical-offset="936" />
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-7-oracle/src.zip!/java/util/StringTokenizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="348" column="0" selection-start="12009" selection-end="12009" vertical-scroll-proportion="0.0" vertical-offset="6264" max-vertical-offset="7866" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/qa_1/lab1/FridgeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="49" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="4014" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/sys_prog/key_words.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="35" selection-start="13" selection-end="13" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="252" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/sys_prog/lexer.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="940" selection-start="940" selection-end="940" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108" />
@@ -1320,9 +1341,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/sys_prog/LexerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="19" selection-start="1151" selection-end="1151" vertical-scroll-proportion="0.0" vertical-offset="192" max-vertical-offset="900">
-          <folding />
-        </state>
+        <state line="43" column="19" selection-start="1151" selection-end="1151" vertical-scroll-proportion="0.0" vertical-offset="192" max-vertical-offset="900" />
       </provider>
     </entry>
     <entry file="jar:///usr/lib/jvm/jdk1.8.0/src.zip!/java/lang/System.java">
@@ -1337,9 +1356,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="31" selection-start="915" selection-end="915" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="648">
-          <folding />
-        </state>
+        <state line="25" column="31" selection-start="915" selection-end="915" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="648" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/images/ascii_grid.png">
@@ -1374,25 +1391,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/qa_1/lab1/FridgeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="19" selection-end="19" vertical-scroll-proportion="-0.441331" vertical-offset="270" max-vertical-offset="3798">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
+        <state line="1" column="0" selection-start="19" selection-end="19" vertical-scroll-proportion="-0.441331" vertical-offset="270" max-vertical-offset="3798" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/kursovaja/LogicTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="34" selection-start="2170" selection-end="2170" vertical-scroll-proportion="0.7539267" vertical-offset="954" max-vertical-offset="1548">
-          <folding />
-        </state>
+        <state line="82" column="34" selection-start="2170" selection-end="2170" vertical-scroll-proportion="0.7539267" vertical-offset="954" max-vertical-offset="1548" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/system_programming/lab2/RealNumbersRegex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="239" selection-end="239" vertical-scroll-proportion="-0.12565444" vertical-offset="198" max-vertical-offset="828">
-          <folding />
-        </state>
+        <state line="11" column="13" selection-start="239" selection-end="239" vertical-scroll-proportion="-0.12565444" vertical-offset="198" max-vertical-offset="828" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/kursovaja/Logic.java">
@@ -1402,9 +1411,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/system_programming/lab1/Lexer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="50" selection-start="1749" selection-end="1749" vertical-scroll-proportion="-0.06428572" vertical-offset="684" max-vertical-offset="3222">
-          <folding />
-        </state>
+        <state line="38" column="50" selection-start="1749" selection-end="1749" vertical-scroll-proportion="-0.06428572" vertical-offset="684" max-vertical-offset="3222" />
       </provider>
     </entry>
     <entry file="jar:///usr/lib/jvm/jdk1.8.0/src.zip!/java/util/ArrayList.java">
@@ -1426,6 +1433,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eom/lab1/Lab1Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="39" selection-start="902" selection-end="902" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/eom/lab1/Intervals.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="69" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1944">
@@ -1433,10 +1447,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/eom/lab1/Lab1Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/system_programming/lab3/Production.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="39" selection-start="902" selection-end="902" vertical-scroll-proportion="0.71875" vertical-offset="0" max-vertical-offset="594">
+        <state line="29" column="0" selection-start="663" selection-end="663" vertical-scroll-proportion="0.71875" vertical-offset="0" max-vertical-offset="576">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system_programming/lab3/Rules.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="3" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system_programming/lab3/NotValidSymbolException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="28" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system_programming/lab3/DKA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system_programming/lab3/MyDKA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="18" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="1836">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system_programming/lab3/MyRules.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="39" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system_programming/lab3/TestDKA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="62" selection-start="1186" selection-end="1186" vertical-scroll-proportion="0.094076656" vertical-offset="702" max-vertical-offset="1296">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
