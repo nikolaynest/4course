@@ -12,7 +12,7 @@ public class Production {
     public Production(Character beginState, Character value, Character endState) {
         this.beginState = Character.toUpperCase(beginState);
         this.value = Character.toLowerCase(value);
-        this.endState = Character.toUpperCase(endState);
+        this.endState = endState;
     }
 
     public Character getBeginState() {

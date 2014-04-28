@@ -55,11 +55,11 @@ public class Lexer {
     }
 
     private String convertToAscii(String val) {
-        StringBuilder sb = new StringBuilder();
-        for (char ch : val.toCharArray()) {
-            sb.append((int) ch);
+        if (val == null){
+            val = "181";
         }
-        return sb.toString();
+        int num = Integer.parseInt(val);
+        return Character.toString((char) num);
     }
 
     /**
@@ -168,8 +168,13 @@ public class Lexer {
 //            System.out.println(s);
 //        }
 
-        for (int i = 0; i < 256; i++) {
-            System.out.println(i + "char: " + Character.toString((char) i));
+        for (int i = 0; i < 20; i++) {
+            String str = Character.toString((char) i);
+            if (str!=null) {
+                System.out.println(i + "char: " + str);
+            }else{
+                System.out.println(i+"char: null");
+            }
         }
     }
 }

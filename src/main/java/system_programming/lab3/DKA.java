@@ -18,6 +18,6 @@ public abstract class DKA {
     }
 
     abstract void checkTape();
-    protected abstract Character transitionFunction(Character state, Character simbol) throws Exception;
+    protected abstract Character transitionFunction(Character state, Character symbol) throws Exception;
 
 }

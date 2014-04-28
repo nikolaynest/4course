@@ -17,26 +17,31 @@ public class MyDKA extends DKA {
         char[] charTape = tape.toCharArray();
         Character current;
         Character currentState = beginState;
+        boolean isEndFlag=false;
         for (int i = 0; i < charTape.length; i++) {
             current = charTape[i];
             try {
                 currentState = transitionFunction(currentState, current);
-                if (currentState == null){
-                    for(Character ch: endStates){
-                        if (current == ch){
-                            System.out.println("Your tape of characters :\'"+tape+"\' is acceptable for this language!");
-                            return;
+                if (currentState == null) {
+                    System.out.println("Your tape of characters :\'" + tape + "\' is acceptable for this language!");
+                    return;
+                } else if (i == charTape.length-1) {
+                    for(Character endCh: endStates){
+                        if (current == endCh){
+                            isEndFlag = true;
                         }
                     }
-                    System.out.println("Your tape of characters: \'"+tape+"\' is NOT acceptable for this language");
-                    return;
+                    if(!isEndFlag){
+                        System.out.println("Your tape of characters: \'" + tape + "\' is NOT acceptable for this language");
+                        return;
+                    }
                 }
             } catch (NotValidSymbolException e) {
-                System.out.println("word: "+tape);
-                System.out.println("Sorry, "+e.getMessage());
+                System.out.println("word: " + tape);
+                System.out.println("Sorry, " + e.getMessage());
                 break;
             } catch (Exception e) {
-                System.out.println("Sorry, "+e.getMessage());
+                System.out.println("Sorry, " + e.getMessage());
 
             }
         }
@@ -52,7 +57,8 @@ public class MyDKA extends DKA {
                         return 'B';
                     case 'т':
                         return 'B';
-                    default: throw new NotValidSymbolException("symbol >"+symbol+"< is not valid for state >"+state+"<");
+                    default:
+                        throw new NotValidSymbolException("symbol >" + symbol + "< is not valid for state >" + state + "<");
                 }
             case 'A':
                 switch (symbol) {
@@ -60,7 +66,8 @@ public class MyDKA extends DKA {
                         return 'C';
                     case 'г':
                         return 'C';
-                    default: throw new NotValidSymbolException("symbol >"+symbol+"< is not valid for state >"+state+"<");
+                    default:
+                        throw new NotValidSymbolException("symbol >" + symbol + "< is not valid for state >" + state + "<");
                 }
             case 'B':
                 switch (symbol) {
@@ -68,7 +75,8 @@ public class MyDKA extends DKA {
                         return 'D';
                     case 'у':
                         return 'C';
-                    default: throw new NotValidSymbolException("symbol >"+symbol+"< is not valid for state >"+state+"<");
+                    default:
+                        throw new NotValidSymbolException("symbol >" + symbol + "< is not valid for state >" + state + "<");
                 }
             case 'C':
                 switch (symbol) {
@@ -76,7 +84,8 @@ public class MyDKA extends DKA {
                         return null;
                     case 'і':
                         return 'C';
-                    default: throw new NotValidSymbolException("symbol >"+symbol+"< is not valid for state >"+state+"<");
+                    default:
+                        throw new NotValidSymbolException("symbol >" + symbol + "< is not valid for state >" + state + "<");
                 }
             case 'D':
                 switch (symbol) {
@@ -84,9 +93,11 @@ public class MyDKA extends DKA {
                         return 'A';
                     case 'и':
                         return 'C';
-                    default: throw new NotValidSymbolException("symbol >"+symbol+"< is not valid for state >"+state+"<");
+                    default:
+                        throw new NotValidSymbolException("symbol >" + symbol + "< is not valid for state >" + state + "<");
                 }
-            default: throw new Exception("State >"+state+"< is not valid");
+            default:
+                throw new Exception("State >" + state + "< is not valid");
         }
 
     }
