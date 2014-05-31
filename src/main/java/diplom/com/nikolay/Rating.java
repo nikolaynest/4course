@@ -8,17 +8,8 @@ import java.util.List;
  */
 public class Rating {
 
-    public List<Double> getRatings(){
-        List<Double> ratings = new ArrayList<>();
-        ratings.add(0.1);
-        ratings.add(0.2);
-        ratings.add(0.3);
-        ratings.add(0.4);
-        ratings.add(0.5);
-        ratings.add(0.6);
-        ratings.add(0.7);
-        ratings.add(0.8);
-        ratings.add(0.9);
+    public Double[] getRatings(){
+        Double[] ratings = new Double[]{0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9};
         return ratings;
     }
 }

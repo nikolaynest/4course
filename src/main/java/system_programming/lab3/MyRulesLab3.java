@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by nikolay on 3/24/14.
  */
-public class MyRules implements Rules {
+public class MyRulesLab3 implements Rules {
 
     @Override
     public List<Production> getRules() {

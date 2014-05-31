@@ -28,17 +28,24 @@ public class RealNumbersRegex {
             lineNumber++;
         }
         br.close();
+        System.out.println("nothing to show");
     }
 
-    public boolean printMatches(String str){
-        Pattern pattern = Pattern.compile("^-?[0-9]+\\.[0-9]+[FfDd]?$");
+    private boolean printMatches(String str){
+        String p = "^[0-9][0-9][0-9][-][0-9][-09]\\s[A-Z][A-Z]$";
+        String pp = "^\\d\\d\\d\\d\\d\\s[A-Z]{2}$";
+
+        String myPattern = "^-?[0-9]+\\.[0-9]+[FfDd]?$";
+
+        Pattern pattern = Pattern.compile(p);
         Matcher m = pattern.matcher(str);
         return m.matches();
     }
 
     public static void main(String[] args) throws IOException {
         RealNumbersRegex rnr = new RealNumbersRegex();
+        File julyFile = new File("/home/nikolay/IdeaProjects/4COURSE/src/resources/sys_prog/julyFile.txt");
         File file = new File("/home/nikolay/IdeaProjects/4COURSE/src/resources/sys_prog/regexTest.txt");
-        rnr.showMatchesFromFile(file);
+        rnr.showMatchesFromFile(julyFile);
     }
 }

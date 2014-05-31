@@ -7,9 +7,9 @@ import java.util.Set;
  */
 public class My2DKA extends DKA{
     private Rules rules;
-    protected My2DKA(String tape, Character beginState, Set<Character> endStates) {
+    protected My2DKA(String tape, Character beginState, Set<Character> endStates, Rules rules) {
         super(tape, beginState, endStates);
-        rules = new MyRules();
+        this.rules = rules;
     }
 
     @Override

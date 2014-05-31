@@ -19,6 +19,10 @@ public class Risk {
         this.acceptable = acceptable;
     }
 
+    public boolean isAcceptable() {
+        return acceptable;
+    }
+
 
     @Override
     public String toString() {

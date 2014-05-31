@@ -1,14 +1,26 @@
 package diplom.com.nikolay;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by nikolay on 27.04.14.
  */
 public class RiskHelper {
     private final String ROOT_NAME = "Root";
     public final Risk treeNode;
+    private List<Risk> leafNodes = new ArrayList<>();
 
     public RiskHelper() {
         treeNode = new Risk(ROOT_NAME, 1.0, true);
+    }
+
+    public List<Risk> getLeafNodes() {
+        return leafNodes;
+    }
+
+    public void setLeafNodes(List<Risk> leafNodes) {
+        this.leafNodes = leafNodes;
     }
 
     public void addNode(Risk node, String name, double probability, boolean accept){
@@ -30,12 +42,67 @@ public class RiskHelper {
     public void inOrderTreeWalk(Risk node){
         if (node != null){
             inOrderTreeWalk(node.up);
-            treatment(node);
+            printRisk(node);
             inOrderTreeWalk(node.down);
         }
     }
 
-    private void treatment(Risk node) {
+    public void getLeafNodes(Risk node){
+
+        if (node.up!=null){
+            getLeafNodes(node.up);
+        } else {
+            leafNodes.add(node);
+        }
+        if (node.down!=null){
+            getLeafNodes(node.down);
+        } else{
+            if (!leafNodes.contains(node)) {
+                leafNodes.add(node);
+            }
+        }
+
+    }
+
+    public void printRisk(Risk node) {
         System.out.println(node.toString());
+    }
+
+    public ArrayList<List<Risk>> getScenarios(){
+        ArrayList<List<Risk>> lists = new ArrayList<>();
+        for (Risk r:leafNodes){
+            List<Risk> scenario = new ArrayList<>();
+            while (r.parent!=null){
+                scenario.add(r);
+                r = r.parent;
+            }
+            lists.add(scenario);
+        }
+        return lists;
+    }
+
+    public ArrayList<StringBuilder> analizeScenarios(ArrayList<List<Risk>> lists){
+        double result;
+        StringBuilder sb;
+        ArrayList<StringBuilder> sbList = new ArrayList<>();
+
+        for (List<Risk> list: lists){
+            result = 1.0;
+            sb = new StringBuilder("");
+            for (Risk risk: list){
+                result *= risk.probability;
+                sb.append("{Name="+risk.name);
+                sb.append(" ,acceptable="+risk.isAcceptable()+"} ");
+            }
+
+            sb.append("value="+round(result, 3));
+            sbList.add(sb);
+        }
+        return sbList;
+    }
+
+    private double round(double value, int digits){
+        double dig = Math.pow(10,digits);
+        return Math.round(value*dig)/dig;
     }
 }

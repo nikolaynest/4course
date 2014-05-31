@@ -1,5 +1,7 @@
 package system_programming.lab3;
 
+import system_programming.lab4.MyRulesLab4;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
@@ -63,7 +65,7 @@ public class TestDKA {
 //        }
 
         for(String tape: TestDKA.getValues()){
-            dka = new My2DKA(tape, 'S', endChars);
+            dka = new My2DKA(tape, 'S', endChars, new MyRulesLab4());
             dka.checkTape();
         }
     }
