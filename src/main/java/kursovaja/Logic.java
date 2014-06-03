@@ -21,8 +21,9 @@ public class Logic {
         return new StringTokenizer(str, " \t\r\n,.!?;:-\"'");
     }
 
-    public HashMap<String,Integer> splitSentence(String sentence) throws NotAWordException {
-        checkNotNullString(sentence);
+    public HashMap<String,Integer> splitSentence(String sentence) throws NotAWordException, EmptySentenceException {
+
+        getSentence(sentence);
 
         StringTokenizer tokenizer = getTokenizer(sentence);
         HashMap<String, Integer> wordsMap = new HashMap<>();
@@ -39,6 +40,13 @@ public class Logic {
         }
         return wordsMap;
     }
+
+    public String getSentence(String sentence) throws EmptySentenceException {
+        checkNotNullString(sentence);
+        checkNotNullButEmptySentence(sentence);
+        return sentence;
+    }
+
 
     public boolean checkNotNullString(String str){
         if (str == null){
@@ -86,6 +94,12 @@ public class Logic {
     }
 
 
+    public void printResults(ArrayList<String> words){
+        for (String s:words){
+            System.out.println(s);
+        }
+    }
+
     public class EmptySentenceException extends Exception {
         public EmptySentenceException(String message) {
              super(message);
@@ -96,5 +110,13 @@ public class Logic {
         public NotAWordException(String message) {
             super(message);
         }
+    }
+
+    public static void main(String[] args) throws NotAWordException, EmptySentenceException {
+        Logic logic = new Logic();
+        String sentence = "mama mila ramu mama mila";
+        HashMap<String, Integer> map = logic.splitSentence(sentence);
+        ArrayList<String> list = logic.getMostOftenRepeatedWord(map);
+        logic.printResults(list);
     }
 }

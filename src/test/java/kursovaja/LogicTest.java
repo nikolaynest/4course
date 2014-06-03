@@ -119,7 +119,7 @@ public class LogicTest {
     /**
      * test splitSentence
      */
-    @Test public void testSplitSentenceNumOfToken() throws Logic.NotAWordException {
+    @Test public void testSplitSentenceNumOfToken() throws Logic.NotAWordException, Logic.EmptySentenceException {
         HashMap<String, Integer> map = logic.splitSentence("mama mila ramu");
         assertEquals(3, map.size());
     }

@@ -15,7 +15,7 @@ public class MyRulesLab4 implements Rules {
         ArrayList<Production> rules = new ArrayList<>(10);
         rules.add(new Production('S', 'с', 'B'));
         rules.add(new Production('S', 'т', 'B'));
-        rules.add(new Production('A', 'а', 'E'));
+//        rules.add(new Production('A', 'а', 'E'));
         rules.add(new Production('B', 'а', 'D'));
         rules.add(new Production('B', 'у', 'C'));
         rules.add(new Production('C', 'і', 'C'));
@@ -25,20 +25,30 @@ public class MyRulesLab4 implements Rules {
         rules.add(new Production('E', 'с', 'B'));
         rules.add(new Production('E', 'т', 'B'));
         rules.add(new Production('E', '<', null));
-        rules.add(new Production('G', 'т', 'B'));
-        rules.add(new Production('G', 'с', 'B'));
-        rules.add(new Production('G', 'ш', 'F'));
+//        rules.add(new Production('G', 'т', 'B'));
+//        rules.add(new Production('G', 'с', 'B'));
+//        rules.add(new Production('G', 'ш', 'F'));
         rules.add(new Production('F', 'а', 'E'));
         rules.add(new Production('F', 'і', 'C'));
         rules.add(new Production('F', '<', null));
-        rules.add(new Production('H', 'і', 'C'));
-        rules.add(new Production('H', 'ш', 'F'));
-        rules.add(new Production('H', '<', null));
+//        rules.add(new Production('H', 'і', 'C'));
+//        rules.add(new Production('H', 'ш', 'F'));
+//        rules.add(new Production('H', '<', null));
         rules.add(new Production('I', 'і', 'C'));
         rules.add(new Production('I', 'с', 'B'));
         rules.add(new Production('I', 'т', 'B'));
         rules.add(new Production('I', 'ш', 'F'));
         rules.add(new Production('I', '<', null));
+
+//        rules.add(new Production('S','м','K'));
+//        rules.add(new Production('K','б','K'));
+//        rules.add(new Production('K','<',null));
+//        rules.add(new Production('K','а','D'));
+//        rules.add(new Production('D','ю','K'));
+//        rules.add(new Production('D','ш','A'));
+//        rules.add(new Production('A','а','K'));
+//        rules.add(new Production('A','б','K'));
+
         return rules;
     }
 }
