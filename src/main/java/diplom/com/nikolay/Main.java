@@ -30,24 +30,29 @@ public class Main {
 
     public static void main(String... args) {
 
-        RiskHelper myHelper = new RiskHelper();
-        myHelper.addNode(myHelper.treeNode,"A", 0.2, true);
-        myHelper.inOrderTreeWalk(myHelper.treeNode);
+        RiskHelper myHelper = RiskHelper.getInstance();
+
+        myHelper.addNode(myHelper.getTreeNode(),"A", 0.2, true);
+        myHelper.inOrderTreeWalk(myHelper.getTreeNode());
         System.out.println();
+
         System.out.println("after add B node:");
-        myHelper.addNode(myHelper.treeNode, "B", 0.4, true);
-        myHelper.inOrderTreeWalk(myHelper.treeNode);
+        myHelper.addNode(myHelper.getTreeNode(), "B", 0.4, true);
+        myHelper.inOrderTreeWalk(myHelper.getTreeNode());
         System.out.println();
+
         System.out.println("after add C node");
-        myHelper.addNode(myHelper.treeNode, "С", 0.1, true);
-        myHelper.inOrderTreeWalk(myHelper.treeNode);
+        myHelper.addNode(myHelper.getTreeNode(), "С", 0.1, true);
+        myHelper.inOrderTreeWalk(myHelper.getTreeNode());
+
 //        System.out.println();
 //        System.out.println("after add D node");
 //        myHelper.addNode(myHelper.treeNode, "D", 0.3, true);
 //        myHelper.inOrderTreeWalk(myHelper.treeNode);
 
+
         System.out.println("\n leafs:");
-        myHelper.getLeafNodes(myHelper.treeNode);
+        myHelper.getLeafNodes(myHelper.getTreeNode());
         ArrayList<Risk> leafs = (ArrayList<Risk>) myHelper.getLeafNodes();
         for (Risk r: leafs){
             System.out.println(r.toString());

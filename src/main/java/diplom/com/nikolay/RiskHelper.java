@@ -7,20 +7,25 @@ import java.util.List;
  * Created by nikolay on 27.04.14.
  */
 public class RiskHelper {
-    private final String ROOT_NAME = "Root";
-    public final Risk treeNode;
-    private List<Risk> leafNodes = new ArrayList<>();
 
-    public RiskHelper() {
+    private static final RiskHelper instance = new RiskHelper();
+    private final Risk treeNode;
+    private final String ROOT_NAME = "Root";
+    private List<Risk> leafNodes = new ArrayList<>();
+    private RiskHelper(){
         treeNode = new Risk(ROOT_NAME, 1.0, true);
+    }
+
+    public static RiskHelper getInstance() {
+        return instance;
+    }
+
+    public Risk getTreeNode() {
+        return treeNode;
     }
 
     public List<Risk> getLeafNodes() {
         return leafNodes;
-    }
-
-    public void setLeafNodes(List<Risk> leafNodes) {
-        this.leafNodes = leafNodes;
     }
 
     public void addNode(Risk node, String name, double probability, boolean accept){
