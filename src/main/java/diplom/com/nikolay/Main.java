@@ -1,7 +1,6 @@
 package diplom.com.nikolay;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
 
@@ -45,19 +44,14 @@ public class Main {
         myHelper.addNode(myHelper.getTreeNode(), "С", 0.1, true);
         myHelper.inOrderTreeWalk(myHelper.getTreeNode());
 
-//        System.out.println();
-//        System.out.println("after add D node");
-//        myHelper.addNode(myHelper.treeNode, "D", 0.3, true);
-//        myHelper.inOrderTreeWalk(myHelper.treeNode);
-
-
         System.out.println("\n leafs:");
-        myHelper.getLeafNodes(myHelper.getTreeNode());
+        myHelper.seekLeafNodesAndAdd(myHelper.getTreeNode());
         ArrayList<Risk> leafs = (ArrayList<Risk>) myHelper.getLeafNodes();
         for (Risk r: leafs){
             System.out.println(r.toString());
         }
 
+        myHelper.getLeafNodes();
         System.out.println("\n scenarios:");
 //        for (List<Risk> list:myHelper.getScenarios()){
 //            System.out.println("scenario:");
@@ -65,9 +59,38 @@ public class Main {
 //                myHelper.printRisk(r);
 //            }
 //        }
-        ArrayList<StringBuilder> sb = myHelper.analizeScenarios(myHelper.getScenarios());
+
+        UseScenarios useScenarios = new UseScenarios(myHelper.getScenarios());
+
+        ArrayList<StringBuilder> sb = useScenarios.getScenariosToString();
         for (StringBuilder s: sb){
             System.out.println(s);
         }
+
+        System.out.println();
+        System.out.println("use scenarios:");
+        ArrayList<Scenario> list = useScenarios.getScenarios();
+        for (Scenario s: list){
+            for (Risk risk: s.getList()){
+                System.out.println(risk.toString());
+            }
+        }
+
+
+        System.out.println();
+        System.out.println("sorting");
+        useScenarios.sortedScenario();
+        sb = useScenarios.getScenariosToString();
+        for (StringBuilder s: sb){
+            System.out.println(s);
+        }
+
+
+        System.out.println();
+        System.out.println("Better:");
+        Scenario better = useScenarios.getBetter();
+        System.out.println(better.toString());
+
+
     }
 }

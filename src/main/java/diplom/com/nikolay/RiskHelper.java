@@ -1,6 +1,7 @@
 package diplom.com.nikolay;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -28,6 +29,10 @@ public class RiskHelper {
         return leafNodes;
     }
 
+    public void resetLeafNodes() {
+        this.leafNodes = new ArrayList<>();
+    }
+
     public void addNode(Risk node, String name, double probability, boolean accept){
 
         if (node.up!=null){
@@ -52,15 +57,15 @@ public class RiskHelper {
         }
     }
 
-    public void getLeafNodes(Risk node){
+    public void seekLeafNodesAndAdd(Risk node){
 
         if (node.up!=null){
-            getLeafNodes(node.up);
+            seekLeafNodesAndAdd(node.up);
         } else {
             leafNodes.add(node);
         }
         if (node.down!=null){
-            getLeafNodes(node.down);
+            seekLeafNodesAndAdd(node.down);
         } else{
             if (!leafNodes.contains(node)) {
                 leafNodes.add(node);
@@ -73,12 +78,12 @@ public class RiskHelper {
         System.out.println(node.toString());
     }
 
-    public ArrayList<List<Risk>> getScenarios(){
-        ArrayList<List<Risk>> lists = new ArrayList<>();
+    public ArrayList<Scenario> getScenarios(){
+        ArrayList<Scenario> lists = new ArrayList<>();
         for (Risk r:leafNodes){
-            List<Risk> scenario = new ArrayList<>();
+            Scenario scenario = new Scenario();
             while (r.parent!=null){
-                scenario.add(r);
+                scenario.getList().add(r);
                 r = r.parent;
             }
             lists.add(scenario);
@@ -86,27 +91,11 @@ public class RiskHelper {
         return lists;
     }
 
-    public ArrayList<StringBuilder> analizeScenarios(ArrayList<List<Risk>> lists){
-        double result;
-        StringBuilder sb;
-        ArrayList<StringBuilder> sbList = new ArrayList<>();
 
-        for (List<Risk> list: lists){
-            result = 1.0;
-            sb = new StringBuilder("");
-            for (Risk risk: list){
-                result *= risk.probability;
-                sb.append("{Name="+risk.name);
-                sb.append(" ,acceptable="+risk.isAcceptable()+"} ");
-            }
 
-            sb.append("value="+round(result, 3));
-            sbList.add(sb);
-        }
-        return sbList;
-    }
 
-    private double round(double value, int digits){
+
+    public static double round(double value, int digits){
         double dig = Math.pow(10,digits);
         return Math.round(value*dig)/dig;
     }

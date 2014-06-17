@@ -1,6 +1,4 @@
-package diplom.com.nikolay.ui;
-
-import diplom.com.nikolay.RiskHelper;
+package diplom.com.nikolay;
 
 import javax.swing.*;
 import java.awt.*;
@@ -17,7 +15,6 @@ public class TreeDraw extends JFrame {
     private static final int GAP = 10;
     private static final int NOT_CORRECT = -1;
 
-    private JLabel label;
     private JTextField riskNameTextField;
     private JButton addRiskButton;
     private JPanel mainPanel;
@@ -28,15 +25,19 @@ public class TreeDraw extends JFrame {
 
     private JPanel headerPanel;
     private JPanel buttonPanel;
+    private JPanel footerPanel;
+    private JTextArea resultText;
+    private JTextArea bestResultTextArea;
 
     private RiskHelper riskHelper;
+    private UseScenarios scenarios;
     private double rating = NOT_CORRECT;
     private boolean acceptable = true;
 
     public TreeDraw(String title) throws HeadlessException {
         super(title);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(new Dimension(1000, 720));
+        setSize(new Dimension(1000, 650));
         initComponents();
         add(mainPanel);
         setBackground(Color.black);
@@ -45,7 +46,6 @@ public class TreeDraw extends JFrame {
 
     private void initComponents() {
         riskHelper = RiskHelper.getInstance();
-
         headerPanel = new JPanel() {
             //Don't allow us to stretch vertically.
             public Dimension getMaximumSize() {
@@ -58,17 +58,10 @@ public class TreeDraw extends JFrame {
         headerPanel.add(createEntryFields());
 
         mainPanel = new JPanel();
-//        mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
-//        mainPanel.setLayout(new GridLayout(3, 1));
-        mainPanel.setLayout(new BorderLayout(3,5));
-
-//        mainPanel.setAlignmentX(LEFT_ALIGNMENT);
+        mainPanel.setLayout(new BorderLayout(3, 5));
         mainPanel.add(headerPanel, BorderLayout.NORTH);
 //        mainPanel.add(new JSeparator(JSeparator.HORIZONTAL), BorderLayout.CENTER);
-
-        JPanel footer = new JPanel();
-        footer.setBorder(BorderFactory.createLineBorder(Color.black));
-        mainPanel.add(footer, BorderLayout.CENTER);
+        mainPanel.add(createFooterPanel(), BorderLayout.CENTER);
     }
 
     private JComponent createEntryFields() {
@@ -115,20 +108,58 @@ public class TreeDraw extends JFrame {
             panel.add(labels[i]);
             panel.add(components[i]);
         }
-        SpringUtilities.makeCompactGrid(panel,
-                labelStrings.length, 2,
-                GAP, GAP, //init x,y
+        SpringUtilities.makeCompactGrid(panel, labelStrings.length, 2, GAP, GAP, //init x,y
                 GAP, GAP / 2);//xpad, ypad
         return panel;
     }
 
     private JComponent createButtonPanel() {
-        buttonPanel = new JPanel(new FlowLayout(FlowLayout.TRAILING));
+        buttonPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         addRiskButton = new JButton("Добавить");
         addRiskButton.addActionListener(listenerForButton);
         buttonPanel.add(addRiskButton);
-//        buttonPanel.setBorder(BorderFactory.createLineBorder(Color.black, 1, true));
         return buttonPanel;
+    }
+
+    private JComponent createFooterPanel() {
+//        footerPanel = new JPanel(new GridLayout(3,2));
+        footerPanel = new JPanel(new BorderLayout(20, 20));
+        footerPanel.setBorder(BorderFactory.createLineBorder(Color.black));
+        JLabel label = new JLabel("Сценарии:");
+        JButton button = new JButton("Получить лучший сценарий");
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Scenario better = new UseScenarios(riskHelper.getScenarios()).getBetter();
+                bestResultTextArea.setText(better.toString());
+
+            }
+        });
+        footerPanel.add(label, BorderLayout.NORTH);
+
+        resultText = new JTextArea(8, 50);
+        resultText.setEditable(false);
+        footerPanel.add(resultText, BorderLayout.CENTER);
+
+        JPanel panel = new JPanel(new BorderLayout(20,30));
+
+        JPanel panel2 = new JPanel(new FlowLayout());
+        JLabel label1 = new JLabel("Лучший сценарий:");
+        bestResultTextArea = new JTextArea(1, 50);
+        bestResultTextArea.setEditable(false);
+        Font font = new Font("Verdana", Font.BOLD, 12);
+        bestResultTextArea.setFont(font);
+        bestResultTextArea.setForeground(Color.GREEN);
+
+        panel2.add(label1);
+        panel2.add(bestResultTextArea);
+
+        panel.add(button, BorderLayout.NORTH);
+        panel.add(panel2, BorderLayout.CENTER);
+        panel.add(new JLabel(""), BorderLayout.SOUTH);
+
+        footerPanel.add(panel, BorderLayout.SOUTH);
+        return footerPanel;
     }
 
     private final ActionListener listenerForRadio = new ActionListener() {
@@ -146,6 +177,7 @@ public class TreeDraw extends JFrame {
     private final ActionListener listenerForButton = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
+            resultText.setText("");
 
             String riskName = riskNameTextField.getText();
             if (!checkString(riskName)) {
@@ -156,10 +188,20 @@ public class TreeDraw extends JFrame {
                         JOptionPane.ERROR_MESSAGE);
             } else {
                 riskHelper.addNode(riskHelper.getTreeNode(), riskName, rating, acceptable);
+                riskHelper.inOrderTreeWalk(riskHelper.getTreeNode());
+
                 riskNameTextField.setText("");
                 yesRadioButton.setSelected(true);
                 rating = NOT_CORRECT;
-                JOptionPane.showMessageDialog(null, "Риск успешно добавлен", "!", JOptionPane.INFORMATION_MESSAGE);
+                riskHelper.resetLeafNodes();
+                riskHelper.seekLeafNodesAndAdd(riskHelper.getTreeNode());
+                riskHelper.getLeafNodes();
+                scenarios = new UseScenarios(riskHelper.getScenarios());
+                final String newLine = "\n";
+                for (StringBuilder s : scenarios.getScenariosToString()) {
+                    resultText.append(s.toString());
+                    resultText.append(newLine);
+                }
             }
         }
     };
