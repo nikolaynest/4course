@@ -122,7 +122,6 @@ public class TreeDraw extends JFrame {
     }
 
     private JComponent createFooterPanel() {
-//        footerPanel = new JPanel(new GridLayout(3,2));
         footerPanel = new JPanel(new BorderLayout(20, 20));
         footerPanel.setBorder(BorderFactory.createLineBorder(Color.black));
         JLabel label = new JLabel("Сценарии:");
@@ -137,22 +136,27 @@ public class TreeDraw extends JFrame {
         });
         footerPanel.add(label, BorderLayout.NORTH);
 
-        resultText = new JTextArea(8, 50);
-        resultText.setEditable(false);
-        footerPanel.add(resultText, BorderLayout.CENTER);
+        resultText = new JTextArea(8, 40);
+
+        JScrollPane scenariosScrollPane = new JScrollPane(resultText);
+
+
+        footerPanel.add(scenariosScrollPane, BorderLayout.CENTER);
 
         JPanel panel = new JPanel(new BorderLayout(20,30));
 
         JPanel panel2 = new JPanel(new FlowLayout());
         JLabel label1 = new JLabel("Лучший сценарий:");
-        bestResultTextArea = new JTextArea(1, 50);
+        bestResultTextArea = new JTextArea(2, 50);
         bestResultTextArea.setEditable(false);
         Font font = new Font("Verdana", Font.BOLD, 12);
         bestResultTextArea.setFont(font);
         bestResultTextArea.setForeground(Color.GREEN);
 
         panel2.add(label1);
-        panel2.add(bestResultTextArea);
+
+        JScrollPane bestScrollPane = new JScrollPane(bestResultTextArea);
+        panel2.add(bestScrollPane);
 
         panel.add(button, BorderLayout.NORTH);
         panel.add(panel2, BorderLayout.CENTER);

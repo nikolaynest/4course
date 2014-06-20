@@ -38,13 +38,16 @@ public class UseScenarios {
             for (Risk risk: s.getList()){
                 sb.append("{"+risk.name);
                 if (risk.isAcceptable()){
-                    sb.append(": Приемлемый} ");
+                    sb.append(": +} ");
                 }else{
-                    sb.append(": Неприемлемый} ");
+                    sb.append(": -} ");
                 }
             }
-            sb.append("Вероятность = \t"+s.getResultProbability());
-            sbList.add(sb);
+//            sb.append("Вероятность = \t"+s.getResultProbability());
+            StringBuilder resultSB = new StringBuilder("");
+            resultSB.append(s.getResultProbability());
+            resultSB.append(" = "+sb);
+            sbList.add(resultSB);
         }
         return sbList;
     }

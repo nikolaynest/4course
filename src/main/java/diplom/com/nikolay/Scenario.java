@@ -42,15 +42,15 @@ public class Scenario {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
+        sb.append("").append(resultProbability).append(" = ");
         for (Risk risk:list){
             sb.append("{").append(risk.name);
             if (risk.isAcceptable()){
-                sb.append(" Приемлемый} ");
+                sb.append(" +} ");
             }else {
-                sb.append(" Неприемлемый} ");
+                sb.append(" -} ");
             }
         }
-        sb.append("Вероятность = \t").append(resultProbability);
 
         return sb.toString();
     }
